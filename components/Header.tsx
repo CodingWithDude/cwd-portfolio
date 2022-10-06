@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import useScrollDirection from "../hooks/useScrollDirection";
-import Hamburger from "hamburger-react";
+import { Twirl as Hamburger } from "hamburger-react";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -13,20 +13,18 @@ const Header = () => {
         scrollDirection === "down" ? "-top-24" : "top-0"
       } m-3 h-24 transition-all duration-500`}
     >
-      <div
-        className={
-          isOpen
-            ? "fixed top-0 h-full w-full backdrop-blur-sm duration-500 ease-in-out"
-            : "fixed top-0 h-full w-full duration-500 ease-in-out"
-        }
-      ></div>
       <div className="-mr-2 flex items-center justify-between text-sm text-white">
         <h1 className="pl-3">Coding With Dude</h1>
-        <div className="z-[1000] md:hidden">
+        <div
+          className={
+            isOpen ? "fixed top-12 h-full w-full backdrop-blur-sm" : "hidden"
+          }
+        ></div>
+        <div className="z-[100] md:hidden">
           <Hamburger
             color="#64ffda"
             easing="ease-in"
-            duration={0.2}
+            duration={0.5}
             toggled={isOpen}
             toggle={setOpen}
           />
