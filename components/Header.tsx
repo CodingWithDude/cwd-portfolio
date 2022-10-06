@@ -6,13 +6,13 @@ const Header = () => {
   const scrollDirection = useScrollDirection();
 
   return (
-    <div
+    <header
       className={`sticky ${
         scrollDirection === "down" ? "-top-24" : "top-0"
       } h-24 transition-all duration-500`}
     >
-      <div className="flex items-center justify-between text-sm text-white">
-        <p>Coding With Dude</p>
+      <div className="flex items-center justify-between text-sm  text-white">
+        <h1>Coding With Dude</h1>
         <nav className="flex">
           <ul className=" flex items-center space-x-8">
             <li>
@@ -48,12 +48,12 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-          <button className="ml-8 rounded border-2 border-[#64ffda] py-2 px-4 text-[#64ffda] transition duration-[.8s] ease-in-out hover:bg-[#64ffda] hover:bg-opacity-[10%]">
+          <button className="ml-8 rounded border-2 border-[#64ffda] py-2 px-4 text-[#64ffda] contrast-75 filter transition duration-[.3s] ease-in-out hover:bg-[#64ffda] hover:bg-opacity-[10%]">
             Resume
           </button>
         </nav>
       </div>
-    </div>
+    </header>
   );
 };
 
