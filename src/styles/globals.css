@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-4 bg-[#0a192f];
+  }
+}
+
+@layer components {
+  .navLinkNumber {
+    @apply text-[#64ffda];
+  }
+  .navLinkTitle {
+    @apply text-[#c6d0ef] transition duration-[.8s] ease-in-out hover:text-[#64ffda];
+  }
+}
