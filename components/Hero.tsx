@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="mx-6 mt-10 w-full">
+    <section className="mx-4 mt-10 w-full">
       <p className="text-lg font-thin text-[#64ffda]">Hi, my name is</p>
       <h2 className="my-6 font-heebo text-5xl font-bold text-[#ccd6f6] ">
         Ryan Austin.
@@ -15,7 +15,7 @@ const Hero = () => {
         designing) exceptional digital experiences. Currently, I&apos;m focused
         on building accessible, human-centered products.
       </p>
-      <button className="rounded border-2 border-[#64ffda] py-4 px-8 text-xl text-[#64ffda] contrast-75 filter transition duration-[.3s] ease-in-out hover:bg-[#64ffda] hover:bg-opacity-[10%]">
+      <button className="rounded border-2 border-[#64ffda] py-4 px-8 text-xl text-[#64ffda]  filter transition duration-[.3s] ease-in-out hover:bg-[#64ffda] hover:bg-opacity-[10%]">
         Contact Me
       </button>
     </section>
