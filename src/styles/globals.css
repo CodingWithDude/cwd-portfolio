@@ -5,15 +5,18 @@
 
 @layer base {
   body {
-    @apply m-4 bg-[#0a192f];
+    @apply m-2 bg-[#0a192f] md:m-4;
   }
 }
 
 @layer components {
   .navLinkNumber {
-    @apply text-[#64ffda];
+    @apply text-[#64ffda] contrast-75;
   }
   .navLinkTitle {
-    @apply text-[#c6d0ef] contrast-75 filter transition duration-[.3s] ease-in-out group-hover:text-[#64ffda];
+    @apply text-[#c6d0ef]  contrast-75 filter transition duration-[.3s] ease-in-out group-hover:text-[#64ffda];
+  }
+  .socialIcons {
+    @apply h-5 w-5 text-[#c6d0ef] contrast-75;
   }
 }
