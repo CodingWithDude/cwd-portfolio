@@ -26,3 +26,9 @@
     @apply mx-4 mt-4 w-[80%] max-w-[1200px] md:ml-20 md:mt-40 lg:ml-24 lg:mt-60;
   }
 }
+
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+}
