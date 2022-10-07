@@ -9,12 +9,12 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky  ${
+      className={`sticky ${
         scrollDirection === "down" ? "-top-24" : "top-0"
-      } m-3 h-24 transition-all duration-500`}
+      } m-3 -mt-2 h-12 bg-[#0a192f]/90 shadow-xl transition-all duration-500`}
     >
-      <div className="-mr-2 flex items-center justify-between text-sm text-white">
-        <h1 className="pl-3">Coding With Dude</h1>
+      <div className="flex items-center justify-between text-sm text-white">
+        <h1>Coding With Dude</h1>
         <div
           className={
             isOpen ? "fixed top-12 h-full w-full backdrop-blur-sm" : "hidden"

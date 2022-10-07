@@ -19,6 +19,8 @@ const Home: NextPage = () => {
       <SocialLinks />
       <main>
         <Hero />
+        <Hero />
+        <Hero />
       </main>
     </>
   );
