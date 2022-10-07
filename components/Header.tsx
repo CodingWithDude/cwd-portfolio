@@ -11,20 +11,16 @@ interface Props {
 const Header = ({ isOpen, setIsOpen }: Props) => {
   const { scrollDirection, atTop } = useScrollDirection();
 
-  const handleBlur = () => {
-    setIsOpen(false);
-  };
-
   useEffect(() => {
-    const main = document.getElementById("main");
+    const blurFilter = document.getElementById("blur-filter");
     if (isOpen) {
-      main?.classList.add("no-scroll");
+      document.body.classList.add("no-scroll");
     } else {
-      main?.classList.remove("no-scroll");
+      document.body.classList.remove("no-scroll");
     }
-    main?.addEventListener("touchstart", () => setIsOpen(false)); // add event listener
+    blurFilter?.addEventListener("touchstart", () => setIsOpen(false)); // add event listener
     return () => {
-      main?.removeEventListener("touchstart", () => setIsOpen(false)); // clean up
+      blurFilter?.removeEventListener("touchstart", () => setIsOpen(false)); // clean up
     };
   }, [isOpen, setIsOpen]);
 
@@ -39,19 +35,19 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
       <div className="mx-4 flex items-center justify-between text-lg text-white md:mx-8">
         <h1>Coding With Dude</h1>
         <div
+          id="blur-filter"
           className={
             isOpen ? "fixed top-0 h-full w-full backdrop-blur-[2px]" : "hidden"
           }
         ></div>
         <div
           className={
-            isOpen ? "z-[100] mr-8 md:hidden" : "z-[100] mr-4 md:hidden"
+            isOpen ? "z-[100] mr-4 md:hidden" : "z-[100] mr-4 md:hidden"
           }
-          onBlur={handleBlur}
         >
           <Hamburger
             color="#64ffda"
-            easing="ease-in"
+            easing="ease-in-out"
             duration={0.5}
             toggled={isOpen}
             toggle={setIsOpen}
