@@ -21,9 +21,9 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
     } else {
       document.body.classList.remove("no-scroll");
     }
-    document.body.addEventListener("focus", () => setIsOpen(false)); // add event listener
+    document.body.addEventListener("touchstart", () => setIsOpen(false)); // add event listener
     return () => {
-      document.body.removeEventListener("focus", () => setIsOpen(false)); // clean up
+      document.body.removeEventListener("touchstart", () => setIsOpen(false)); // clean up
     };
   }, [isOpen, setIsOpen]);
 
@@ -35,16 +35,17 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
         atTop ? "" : "shadow-xl"
       }`}
     >
-      <div
-        className={
-          isOpen ? "fixed top-0 h-full w-full backdrop-blur" : "hidden"
-        }
-      ></div>
       <div className="mx-4 flex items-center justify-between text-lg text-white md:mx-8">
         <h1>Coding With Dude</h1>
-
         <div
-          className={isOpen ? "z-[100] mr-4 md:hidden" : ""}
+          className={
+            isOpen ? "fixed top-0 h-full w-full backdrop-blur-[2px]" : "hidden"
+          }
+        ></div>
+        <div
+          className={
+            isOpen ? "z-[100] mr-8 md:hidden" : "z-[100] mr-4 md:hidden"
+          }
           onBlur={handleBlur}
         >
           <Hamburger
@@ -58,10 +59,11 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
         <div
           className={
             isOpen
-              ? "fixed top-0 right-0 h-full w-64 bg-[#112240] pt-8 shadow-xl duration-500 ease-in-out"
+              ? "fixed top-0 right-0 h-[140%] w-72 bg-[#112240] pt-8 shadow-xl duration-500 ease-in-out"
               : "fixed top-0 right-[-100%] h-full w-72 bg-[#112240] duration-500 ease-in-out"
           }
         >
+          {/* Mobile Nav */}
           <nav className="flex flex-col items-end">
             <ul className="flex min-h-full w-full flex-col items-center space-y-12 pt-16">
               <li>
