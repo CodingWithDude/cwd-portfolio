@@ -10,6 +10,7 @@ interface Props {
 
 const Header = ({ isOpen, setIsOpen }: Props) => {
   const { scrollDirection, atTop } = useScrollDirection();
+  const main = document.getElementById("main");
 
   const handleBlur = () => {
     setIsOpen(false);
@@ -17,15 +18,15 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add("no-scroll");
+      main?.classList.add("no-scroll");
     } else {
-      document.body.classList.remove("no-scroll");
+      main?.classList.remove("no-scroll");
     }
-    document.body.addEventListener("touchstart", () => setIsOpen(false)); // add event listener
+    main?.addEventListener("touchstart", () => setIsOpen(false)); // add event listener
     return () => {
-      document.body.removeEventListener("touchstart", () => setIsOpen(false)); // clean up
+      main?.removeEventListener("touchstart", () => setIsOpen(false)); // clean up
     };
-  }, [isOpen, setIsOpen]);
+  }, [isOpen, setIsOpen, main]);
 
   return (
     <header

@@ -4,7 +4,6 @@ import { useState } from "react";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import SocialLinks from "../../components/SocialLinks";
-import useScrollDirection from "../../hooks/useScrollDirection";
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +20,7 @@ const Home: NextPage = () => {
       </Head>
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <SocialLinks />
-      <main>
+      <main id="main">
         <Hero />
         <Hero />
         <Hero />
