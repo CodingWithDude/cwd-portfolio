@@ -20,7 +20,7 @@
     @apply h-5 w-5 text-[#c6d0ef];
   }
   .no-scroll {
-    @apply overflow-y-hidden;
+    @apply touch-none overflow-y-hidden;
   }
   .section-margins {
     @apply mx-4 mt-4 w-[80%] max-w-[1200px] md:ml-20 md:mt-40 lg:ml-24 lg:mt-60;
