@@ -1,7 +1,7 @@
 import Link from "next/link";
 import useScrollDirection from "../hooks/useScrollDirection";
 import { Twirl as Hamburger } from "hamburger-react";
-import { useEffect, TouchEvent } from "react";
+import { useEffect } from "react";
 
 interface Props {
   isOpen: boolean;
@@ -39,7 +39,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
         <h1>Coding With Dude</h1>
         <div
           className={
-            isOpen ? "h-scree fixed w-screen backdrop-blur-sm" : "hidden"
+            isOpen ? "fixed h-screen w-screen backdrop-blur-sm" : "hidden"
           }
         ></div>
         <div className="z-[100] md:hidden" onBlur={handleBlur}>
@@ -54,8 +54,8 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
         <div
           className={
             isOpen
-              ? "fixed top-0 right-0 h-full w-64 bg-[#112240] pt-3 pr-5 duration-500 ease-in-out"
-              : "fixed top-0 right-[-100%] h-full w-72 bg-[#112240] pt-3 pr-5 duration-500 ease-in-out"
+              ? "fixed top-0 right-0 h-screen w-64 bg-[#112240] pt-3 pr-5 duration-500 ease-in-out"
+              : "fixed top-0 right-[-100%] h-screen w-72 bg-[#112240] pt-3 pr-5 duration-500 ease-in-out"
           }
         >
           <nav className="flex flex-col items-end  ">
