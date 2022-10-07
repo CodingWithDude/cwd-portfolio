@@ -1,7 +1,7 @@
 import Link from "next/link";
 import useScrollDirection from "../hooks/useScrollDirection";
 import { Twirl as Hamburger } from "hamburger-react";
-import { useEffect } from "react";
+import { useEffect, TouchEvent } from "react";
 
 interface Props {
   isOpen: boolean;
@@ -10,6 +10,10 @@ interface Props {
 
 const Header = ({ isOpen, setIsOpen }: Props) => {
   const { scrollDirection, atTop } = useScrollDirection();
+
+  const handleTouchStart = (event: TouchEvent<HTMLButtonElement>) => {
+    setIsOpen(false);
+  };
 
   const handleBlur = (event: React.FocusEvent<HTMLElement>) => {
     setIsOpen(false);
@@ -42,7 +46,11 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
             isOpen ? "fixed top-12 h-full w-full backdrop-blur-sm" : "hidden"
           }
         ></div>
-        <div className="z-[100] md:hidden" onBlur={handleBlur}>
+        <div
+          className="z-[100] md:hidden"
+          onBlur={handleBlur}
+          onTouchStart={handleTouchStart}
+        >
           <Hamburger
             color="#64ffda"
             easing="ease-in"
