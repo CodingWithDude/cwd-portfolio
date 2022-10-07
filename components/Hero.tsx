@@ -2,12 +2,12 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="mx-4 mt-10 w-full">
-      <p className="text-lg font-thin text-[#64ffda]">Hi, my name is</p>
-      <h2 className="my-6 font-heebo text-5xl font-bold text-[#ccd6f6] ">
+    <section className="section-margins">
+      <p className=" font-thin text-[#64ffda]">Hi, my name is</p>
+      <h2 className="my-6 font-heebo text-5xl font-bold text-[#ccd6f6] md:text-6xl lg:text-8xl ">
         Ryan Austin.
       </h2>
-      <h2 className="mb-5 font-heebo text-5xl font-bold text-[#8892b0] ">
+      <h2 className="mb-5 font-heebo text-5xl font-bold text-[#8892b0] md:text-6xl lg:text-8xl ">
         I build things for the web.
       </h2>
       <p className="mb-8 mr-12 text-[#8892b0]">

@@ -5,21 +5,24 @@
 
 @layer base {
   body {
-    @apply m-4 h-full w-full bg-[#0a192f];
+    @apply m-4 w-full overflow-x-hidden  bg-[#0a192f];
   }
 }
 
 @layer components {
   .navLinkNumber {
-    @apply text-[#64ffda] contrast-75;
+    @apply text-[#64ffda];
   }
   .navLinkTitle {
-    @apply text-[#c6d0ef]  contrast-75 filter transition duration-[.3s] ease-in-out group-hover:text-[#64ffda];
+    @apply text-[#c6d0ef] transition duration-[.3s] ease-in-out group-hover:text-[#64ffda];
   }
   .socialIcons {
-    @apply h-5 w-5 text-[#c6d0ef] contrast-75;
+    @apply h-5 w-5 text-[#c6d0ef];
   }
   .no-scroll {
-    @apply overflow-hidden;
+    @apply overflow-y-hidden;
+  }
+  .section-margins {
+    @apply mx-4 mt-4 w-[80%] max-w-[1200px] md:ml-20 md:mt-40 lg:ml-24 lg:mt-60;
   }
 }

@@ -30,19 +30,23 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
   return (
     <header
       className={`sticky ${
-        scrollDirection === "down" ? "-top-24" : "top-0"
-      } m-3 h-12 transition-all duration-500 ${
-        atTop ? "" : "bg-[#0a192f]/75 shadow-xl"
+        scrollDirection === "down" ? "-top-24" : "-top-1"
+      } w-full bg-[#0a192f] transition-all duration-500 ${
+        atTop ? "" : "shadow-xl"
       }`}
     >
-      <div className="flex items-center justify-between text-lg text-white">
+      <div
+        className={
+          isOpen ? "fixed top-0 h-full w-full backdrop-blur" : "hidden"
+        }
+      ></div>
+      <div className="mx-4 flex items-center justify-between text-lg text-white md:mx-8">
         <h1>Coding With Dude</h1>
+
         <div
-          className={
-            isOpen ? "fixed top-0 h-full w-full backdrop-blur-sm" : "hidden"
-          }
-        ></div>
-        <div className="z-[100] md:hidden" onBlur={handleBlur}>
+          className={isOpen ? "z-[100] mr-4 md:hidden" : ""}
+          onBlur={handleBlur}
+        >
           <Hamburger
             color="#64ffda"
             easing="ease-in"
@@ -54,11 +58,11 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
         <div
           className={
             isOpen
-              ? "fixed -top-10 right-0 h-[120%] w-64 bg-[#112240] pt-16 pr-5 duration-500 ease-in-out"
-              : "fixed top-0 right-[-100%] h-full w-72 bg-[#112240] pt-3 pr-5 duration-500 ease-in-out"
+              ? "fixed top-0 right-0 h-full w-64 bg-[#112240] pt-8 shadow-xl duration-500 ease-in-out"
+              : "fixed top-0 right-[-100%] h-full w-72 bg-[#112240] duration-500 ease-in-out"
           }
         >
-          <nav className="flex flex-col items-end  ">
+          <nav className="flex flex-col items-end">
             <ul className="flex min-h-full w-full flex-col items-center space-y-12 pt-16">
               <li>
                 <Link href="/">

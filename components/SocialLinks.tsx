@@ -9,7 +9,7 @@ import {
 const SocialLinks = () => {
   return (
     <div className="hidden md:block">
-      <div className="fixed left-[30px] bottom-0 flex flex-col items-center ">
+      <div className="fixed left-[30px] bottom-0 flex flex-col items-center md:left-[30px] ">
         <div className="flex flex-col gap-6 text-[#8892b0]">
           <a href="">
             <FiGithub className="socialIcons" />
