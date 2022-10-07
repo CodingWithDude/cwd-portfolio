@@ -58,8 +58,8 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
         <div
           className={
             isOpen
-              ? "fixed top-0 right-0 h-[120vh] min-h-max w-72 bg-[#112240] pt-8 shadow-2xl duration-500 ease-in-out"
-              : "fixed top-0 right-[-100%] h-[120vh] min-h-max w-72 bg-[#112240] pt-8 duration-500 ease-in-out"
+              ? "fixed top-0 right-0 h-[140%] w-72 bg-[#112240] pt-8 shadow-2xl duration-500 ease-in-out"
+              : "fixed top-0 right-[-100%] h-[140%] w-72 bg-[#112240] pt-8 duration-500 ease-in-out"
           }
         >
           {/* Mobile Nav */}
