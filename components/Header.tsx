@@ -38,7 +38,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
           id="blur-filter"
           className={
             isOpen
-              ? "fixed top-0 -ml-4 h-full w-full backdrop-blur-[2px]"
+              ? "fixed top-0 -ml-4 h-[140%] w-full backdrop-blur-[2px]"
               : "hidden"
           }
         ></div>
@@ -58,7 +58,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
         <div
           className={
             isOpen
-              ? "fixed top-0 right-0 h-full w-72 bg-[#112240] pt-8 shadow-xl  ease-in-out"
+              ? "fixed top-0 right-0 h-[140%] w-72 bg-[#112240] pt-8 shadow-xl  ease-in-out"
               : "fixed top-0 right-[-100%] h-full w-72 bg-[#112240]  ease-in-out"
           }
         >
