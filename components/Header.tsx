@@ -11,11 +11,7 @@ interface Props {
 const Header = ({ isOpen, setIsOpen }: Props) => {
   const { scrollDirection, atTop } = useScrollDirection();
 
-  const handleTouchStart = (event: TouchEvent<HTMLButtonElement>) => {
-    setIsOpen(false);
-  };
-
-  const handleBlur = (event: React.FocusEvent<HTMLElement>) => {
+  const handleBlur = () => {
     setIsOpen(false);
   };
 
@@ -43,14 +39,10 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
         <h1>Coding With Dude</h1>
         <div
           className={
-            isOpen ? "fixed top-12 h-full w-full backdrop-blur-sm" : "hidden"
+            isOpen ? "h-scree fixed w-screen backdrop-blur-sm" : "hidden"
           }
         ></div>
-        <div
-          className="z-[100] md:hidden"
-          onBlur={handleBlur}
-          onTouchStart={handleTouchStart}
-        >
+        <div className="z-[100] md:hidden" onBlur={handleBlur}>
           <Hamburger
             color="#64ffda"
             easing="ease-in"
