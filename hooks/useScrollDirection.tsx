@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 const useScrollDirection = () => {
   const [scrollDirection, setScrollDirection] = useState<string | null>(null);
+  const [atTop, setAtTop] = useState(true);
 
   useEffect(() => {
     let lastScrollY = window.pageYOffset;
@@ -11,9 +12,14 @@ const useScrollDirection = () => {
       const direction = scrollY > lastScrollY ? "down" : "up";
       if (
         direction !== scrollDirection &&
-        (scrollY - lastScrollY > 1 || scrollY - lastScrollY < -1)
+        (scrollY - lastScrollY > 2 || scrollY - lastScrollY < -2)
       ) {
         setScrollDirection(direction);
+      }
+      if (scrollY === 0) {
+        setAtTop(true);
+      } else {
+        setAtTop(false);
       }
       lastScrollY = scrollY > 0 ? scrollY : 0;
     };
@@ -23,7 +29,7 @@ const useScrollDirection = () => {
     };
   }, [scrollDirection]);
 
-  return scrollDirection;
+  return { scrollDirection, atTop };
 };
 
 export default useScrollDirection;

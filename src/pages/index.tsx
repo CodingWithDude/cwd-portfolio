@@ -1,10 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useState } from "react";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import SocialLinks from "../../components/SocialLinks";
+import useScrollDirection from "../../hooks/useScrollDirection";
 
 const Home: NextPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -15,9 +19,12 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <SocialLinks />
       <main>
+        <Hero />
+        <Hero />
+        <Hero />
         <Hero />
         <Hero />
         <Hero />

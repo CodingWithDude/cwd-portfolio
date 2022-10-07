@@ -1,38 +1,60 @@
 import Link from "next/link";
-import { useState } from "react";
 import useScrollDirection from "../hooks/useScrollDirection";
 import { Twirl as Hamburger } from "hamburger-react";
+import { useEffect } from "react";
 
-const Header = () => {
-  const [isOpen, setOpen] = useState(false);
-  const scrollDirection = useScrollDirection();
+interface Props {
+  isOpen: boolean;
+  setIsOpen: (value: boolean | ((prevVar: boolean) => boolean)) => void;
+}
+
+const Header = ({ isOpen, setIsOpen }: Props) => {
+  const { scrollDirection, atTop } = useScrollDirection();
+
+  const handleBlur = (event: React.FocusEvent<HTMLElement>) => {
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+    document.body.addEventListener("focus", () => setIsOpen(false)); // add event listener
+    return () => {
+      document.body.removeEventListener("focus", () => setIsOpen(false)); // clean up
+    };
+  }, [isOpen, setIsOpen]);
 
   return (
     <header
       className={`sticky ${
         scrollDirection === "down" ? "-top-24" : "top-0"
-      } m-3 -mt-2 h-12 bg-[#0a192f]/90 shadow-xl transition-all duration-500`}
+      } m-3 -mt-2 h-12 transition-all duration-500 ${
+        atTop ? "" : "bg-[#0a192f]/75 shadow-xl"
+      }`}
     >
-      <div className="flex items-center justify-between text-sm text-white">
+      <div className="flex items-center justify-between text-lg text-white">
         <h1>Coding With Dude</h1>
         <div
           className={
             isOpen ? "fixed top-12 h-full w-full backdrop-blur-sm" : "hidden"
           }
         ></div>
-        <div className="z-[100] md:hidden">
+        <div className="z-[100] md:hidden" onBlur={handleBlur}>
           <Hamburger
             color="#64ffda"
             easing="ease-in"
             duration={0.5}
             toggled={isOpen}
-            toggle={setOpen}
+            toggle={setIsOpen}
           />
         </div>
         <div
           className={
             isOpen
-              ? "fixed top-0 right-0 h-full w-72 bg-[#112240] pt-3 pr-5 duration-500 ease-in-out"
+              ? "fixed top-0 right-0 h-full w-64 bg-[#112240] pt-3 pr-5 duration-500 ease-in-out"
               : "fixed top-0 right-[-100%] h-full w-72 bg-[#112240] pt-3 pr-5 duration-500 ease-in-out"
           }
         >
