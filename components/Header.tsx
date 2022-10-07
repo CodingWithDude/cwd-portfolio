@@ -31,14 +31,16 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
     <header
       className={`sticky ${
         scrollDirection === "down" ? "-top-24" : "top-0"
-      } m-3 -mt-2 h-12 transition-all duration-500 ${
+      } m-3 h-12 transition-all duration-500 ${
         atTop ? "" : "bg-[#0a192f]/75 shadow-xl"
       }`}
     >
       <div className="flex items-center justify-between text-lg text-white">
         <h1>Coding With Dude</h1>
         <div
-          className={isOpen ? "fixed h-full w-full backdrop-blur-sm" : "hidden"}
+          className={
+            isOpen ? "fixed top-0 h-full w-full backdrop-blur-sm" : "hidden"
+          }
         ></div>
         <div className="z-[100] md:hidden" onBlur={handleBlur}>
           <Hamburger
@@ -52,7 +54,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
         <div
           className={
             isOpen
-              ? "fixed top-0 right-0 h-full w-64 bg-[#112240] pt-3 pr-5 duration-500 ease-in-out"
+              ? "fixed -top-10 right-0 h-[120%] w-64 bg-[#112240] pt-16 pr-5 duration-500 ease-in-out"
               : "fixed top-0 right-[-100%] h-full w-72 bg-[#112240] pt-3 pr-5 duration-500 ease-in-out"
           }
         >
