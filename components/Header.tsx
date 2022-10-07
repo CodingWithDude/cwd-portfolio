@@ -29,24 +29,20 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
       className={`sticky ${
         scrollDirection === "down" ? "-top-24" : "-top-1"
       } w-full bg-[#0a192f] transition-all duration-500 ${
-        atTop ? "" : "shadow-xl"
+        atTop ? "py-2" : "py-2 shadow-xl"
       }`}
     >
-      <div className="mx-4 flex items-center justify-between text-lg text-white md:mx-8">
+      <div className="flex items-center justify-between text-lg text-white md:mx-8">
         <h1>Coding With Dude</h1>
         <div
           id="blur-filter"
           className={
             isOpen
-              ? "fixed top-0 -ml-4 h-[140%] w-full backdrop-blur-[2px]"
+              ? "fixed top-0 -ml-8 h-[140%] w-full backdrop-blur-[2px]"
               : "hidden"
           }
         ></div>
-        <div
-          className={
-            isOpen ? "z-[100] mr-4 md:hidden" : "z-[100] mr-4 md:hidden"
-          }
-        >
+        <div className={isOpen ? "z-[100] md:hidden" : "z-[100] md:hidden"}>
           <Hamburger
             color="#64ffda"
             easing="ease-in-out"

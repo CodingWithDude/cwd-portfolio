@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
+    <div className="h-full w-full px-4">
       <Head>
         <title>Coding with Dude</title>
         <meta
@@ -20,15 +20,12 @@ const Home: NextPage = () => {
       </Head>
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <SocialLinks />
-      <main id="main">
-        <Hero />
-        <Hero />
-        <Hero />
-        <Hero />
-        <Hero />
-        <Hero />
-      </main>
-    </>
+      <Hero />
+      <Hero />
+      <Hero />
+      <Hero />
+      <Hero />
+    </div>
   );
 };
 
