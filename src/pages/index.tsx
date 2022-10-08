@@ -2,14 +2,13 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import Header from "../../components/Header";
-import Hero from "../../components/Hero";
 import SocialLinks from "../../components/SocialLinks";
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="h-full w-full px-4">
+    <div className="h-screen w-screen">
       <Head>
         <title>Coding with Dude</title>
         <meta
@@ -20,11 +19,6 @@ const Home: NextPage = () => {
       </Head>
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <SocialLinks />
-      <Hero />
-      <Hero />
-      <Hero />
-      <Hero />
-      <Hero />
     </div>
   );
 };

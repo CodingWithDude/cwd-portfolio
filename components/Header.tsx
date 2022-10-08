@@ -26,13 +26,11 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
 
   return (
     <header
-      className={`sticky ${
-        scrollDirection === "down" ? "-top-24" : "-top-1"
-      } w-full bg-[#0a192f] transition-all duration-500 ${
-        atTop ? "py-2" : "py-2 shadow-xl"
-      }`}
+      className={`sticky bg-[#0a192f] ${
+        scrollDirection === "down" ? "-top-24" : "top-0"
+      }  transition-all duration-500 ${atTop ? "" : "shadow-xl"}`}
     >
-      <div className="flex items-center justify-between text-lg text-white md:mx-8">
+      <div className="flex w-full items-center justify-between px-6 py-4 text-lg text-white md:py-7 md:px-14">
         <h1>Coding With Dude</h1>
         <div
           id="blur-filter"
