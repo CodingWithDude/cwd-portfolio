@@ -22,6 +22,7 @@ const Home: NextPage = () => {
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <SocialLinks />
       <Hero />
+      <Hero />
       <Blur isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
