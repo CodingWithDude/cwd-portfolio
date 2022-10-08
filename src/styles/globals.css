@@ -10,16 +10,57 @@
 }
 
 @layer components {
-  .navLinkNumber {
+  .nav-link-number {
     @apply text-[#64ffda];
   }
-  .navLinkTitle {
+  .nav-link-title {
     @apply text-[#c6d0ef] transition duration-[.4s] ease-in-out group-hover:text-[#64ffda];
   }
-  .socialIcons {
-    @apply h-5 w-5 text-[#8892b0];
+  .social-icons {
+    @apply h-5 w-5 text-[#8892b0] transition duration-[.4s] hover:text-[#64ffda];
   }
   .no-scroll {
     @apply touch-none overflow-y-hidden;
+  }
+  .logo-color {
+    @apply text-[#64ffda];
+  }
+  .logo-grey {
+    @apply text-[#c6d0ef];
+  }
+  /* typing animation */
+  .typing-wrapper {
+    height: 100%;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+  }
+
+  .typing-desktop {
+    width: 18ch;
+    animation: typing 2.5s steps(18), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+  }
+
+  .typing-mobile {
+    width: 7ch;
+    animation: typing 1.5s steps(7), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
   }
 }

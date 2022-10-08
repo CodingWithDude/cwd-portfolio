@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useState } from "react";
 import Blur from "../../components/Blur";
 import Header from "../../components/header/Header";
+import Hero from "../../components/Hero";
 import SocialLinks from "../../components/SocialLinks";
 
 const Home: NextPage = () => {
@@ -22,6 +23,8 @@ const Home: NextPage = () => {
       <SocialLinks />
       <main className="text-white">
         <Blur isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Hero />
+        <Hero />
       </main>
     </div>
   );
