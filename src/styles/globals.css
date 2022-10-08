@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -46,8 +47,8 @@
   }
 
   .typing-mobile {
-    width: 7ch;
-    animation: typing 2s steps(7), blink 0.5s step-end infinite alternate;
+    width: 10ch;
+    animation: typing 2s steps(10), blink 0.5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;

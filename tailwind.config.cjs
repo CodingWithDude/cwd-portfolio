@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         heebo: ["Heebo", "sans-serif"],
         notoSansMono: ["Noto Sans Mono", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
