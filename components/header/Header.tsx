@@ -21,7 +21,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
     >
       <div className="flex w-full items-center justify-between px-6 py-4 text-lg text-white md:py-7 md:px-8 lg:px-12">
         {/* Logo Text */}
-        <div className="logo cursor-pointer text-2xl font-bold">
+        <div className="logo cursor-pointer font-notoSansMono text-3xl font-medium">
           <div className="typing-mobile md:hidden">
             <span className="logo-color">{`<C`}</span>
             <span className="logo-grey">W</span>
