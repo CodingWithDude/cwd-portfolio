@@ -19,7 +19,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
         scrollDirection === "down" ? "-top-24" : "top-0"
       }  transition-all duration-500 ${atTop ? "" : "shadow-xl"}`}
     >
-      <div className="flex w-full items-center justify-between px-6 py-4 text-lg text-white md:py-7 md:px-8 lg:px-12">
+      <div className="flex w-full items-center justify-between px-6 py-4 text-lg text-white md:py-8 md:px-8 lg:px-12">
         {/* Logo Text */}
         <div className="logo cursor-pointer font-notoSansMono text-3xl font-medium">
           <div className="typing-mobile md:hidden">
