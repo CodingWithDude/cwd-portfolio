@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
-import Header from "../../components/Header";
+import Blur from "../../components/Blur";
+import Header from "../../components/header/Header";
 import SocialLinks from "../../components/SocialLinks";
 
 const Home: NextPage = () => {
@@ -19,6 +20,9 @@ const Home: NextPage = () => {
       </Head>
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <SocialLinks />
+      <main className="text-white">
+        <Blur isOpen={isOpen} setIsOpen={setIsOpen} />
+      </main>
     </div>
   );
 };
