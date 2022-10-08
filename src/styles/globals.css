@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply overflow-x-hidden bg-[#0a192f];
+    @apply bg-[#0a192f];
   }
 }
 
@@ -30,7 +30,7 @@
   .logo-grey {
     @apply text-[#c6d0ef];
   }
-  /* typing animation */
+  /* Typing Animation */
   .typing-wrapper {
     height: 100%;
     /*This part is important for centering*/

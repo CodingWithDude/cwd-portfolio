@@ -3,7 +3,7 @@ import Link from "next/link";
 const DesktopNav = () => {
   return (
     <nav className="hidden md:block">
-      <ul className="flex items-center text-sm md:gap-2">
+      <ul className="flex items-center text-sm md:gap-2 lg:text-lg xl:text-xl">
         <li>
           <Link href="/">
             <a className="group">
