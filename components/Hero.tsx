@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="flex h-[calc(100vh-80px)] w-full flex-col justify-center px-12 md:px-32 lg:pl-[calc(50vw-400px)]">
+    <section className="flex h-[calc(100vh-80px)] min-h-[400px] w-full flex-col justify-center px-12 md:min-h-[500px] md:px-32 lg:pl-[calc(50vw-400px)]">
       <p className=" font-thin text-[#64ffda]">Hi, my name is</p>
       <h2 className="my-6 font-heebo text-5xl font-bold text-[#ccd6f6] md:text-6xl lg:text-7xl">
         Ryan Austin.

@@ -15,7 +15,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
 
   return (
     <header
-      className={`sticky z-[2] bg-transparent backdrop-blur-[20px] backdrop-filter ${
+      className={`sticky z-[2] bg-[#0a192f] bg-opacity-95  ${
         scrollDirection === "down" ? "-top-24" : "top-0"
       }  transition-all duration-500 ${atTop ? "" : "shadow-xl"}`}
     >

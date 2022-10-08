@@ -7,7 +7,7 @@ interface Props {
 const MobileNav = ({ isOpen }: Props) => {
   return (
     <div
-      className={`h-[140%] w-64 bg-[#112240] pt-8 shadow-2xl duration-500 ease-in-out
+      className={`h-[140%] w-44 bg-[#112240] pt-8 shadow-2xl duration-500 ease-in-out
     ${isOpen ? "fixed top-0 right-0" : "fixed top-0 right-[-200%]"}
   `}
     >
@@ -17,32 +17,32 @@ const MobileNav = ({ isOpen }: Props) => {
           <li>
             <Link href="/">
               <a className="flex flex-col items-center">
-                <span className="navLinkNumber">01. </span>
-                <span className="navLinkTitle">About</span>
+                <span className="nav-link-number">01. </span>
+                <span className="nav-link-title">About</span>
               </a>
             </Link>
           </li>
           <li>
             <Link href="/">
               <a className="flex flex-col items-center">
-                <span className="navLinkNumber">02. </span>
-                <span className="navLinkTitle">Experience</span>
+                <span className="nav-link-number">02. </span>
+                <span className="nav-link-title">Experience</span>
               </a>
             </Link>
           </li>
           <li>
             <Link href="/">
               <a className="flex flex-col items-center">
-                <span className="navLinkNumber">03. </span>
-                <span className="navLinkTitle">Work</span>
+                <span className="nav-link-number">03. </span>
+                <span className="nav-link-title">Work</span>
               </a>
             </Link>
           </li>
           <li>
             <Link href="/">
               <a className="flex flex-col items-center">
-                <span className="navLinkNumber">04. </span>
-                <span className="navLinkTitle">Contact</span>
+                <span className="nav-link-number">04. </span>
+                <span className="nav-link-title">Contact</span>
               </a>
             </Link>
           </li>
