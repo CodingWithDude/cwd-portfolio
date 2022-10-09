@@ -15,7 +15,7 @@ const MobileNav = ({ isOpen }: Props) => {
       <nav className="flex flex-col items-end">
         <ul className="flex w-full flex-col items-center space-y-12 pt-16">
           <li>
-            <Link href="/">
+            <Link href="../About.tsx">
               <a className="flex flex-col items-center">
                 <span className="nav-link-number">01. </span>
                 <span className="nav-link-title">About</span>

@@ -5,7 +5,7 @@ const DesktopNav = () => {
     <nav className="hidden md:block">
       <ul className="flex items-center text-sm md:gap-2 lg:text-lg xl:gap-8 xl:text-xl">
         <li>
-          <Link href="/">
+          <Link href="#about" scroll={false}>
             <a className="group whitespace-nowrap">
               <span className="nav-link-number">01. </span>
               <span className="nav-link-title">About</span>

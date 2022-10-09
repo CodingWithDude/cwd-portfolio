@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
+import About from "../../components/about";
 import Blur from "../../components/Blur";
 import Header from "../../components/header/Header";
 import Hero from "../../components/Hero";
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
       <SocialLinks />
       <Hero />
       <Hero />
+      <About />
       <Blur isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
