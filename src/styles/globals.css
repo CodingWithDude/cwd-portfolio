@@ -41,6 +41,7 @@
   .typing-desktop {
     width: 18ch;
     animation: typing 2.5s steps(18), blink 0.5s step-end infinite alternate;
+    animation-delay: 0.1s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;

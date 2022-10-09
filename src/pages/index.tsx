@@ -1,15 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useState } from "react";
-import About from "../../components/about";
-import Blur from "../../components/Blur";
-import Header from "../../components/header/Header";
+import About from "../../components/About";
 import Hero from "../../components/Hero";
-import SocialLinks from "../../components/SocialLinks";
 
 const Home: NextPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div className="h-screen w-screen">
       <Head>
@@ -20,12 +14,13 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
-      <SocialLinks />
-      <Hero />
       <Hero />
       <About />
-      <Blur isOpen={isOpen} setIsOpen={setIsOpen} />
+      <About />
+      <About />
+      <About />
+      <About />
+      <About />
     </div>
   );
 };

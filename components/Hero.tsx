@@ -1,14 +1,14 @@
 const Hero = () => {
   return (
-    <section className="flex h-[calc(100vh-80px)] min-h-[400px] w-full flex-col justify-center px-12 md:min-h-[500px] md:px-32 lg:pl-[calc(50vw-400px)]">
+    <section className="flex h-screen min-h-[400px] w-full flex-col justify-center px-6 pt-[80px] md:px-32 lg:pl-[calc(50vw-400px)]">
       <p className=" font-thin text-[#64ffda]">Hi, my name is</p>
-      <h2 className="my-6 font-heebo text-5xl font-bold text-[#ccd6f6] md:text-6xl lg:text-7xl">
+      <h2 className="my-4 font-heebo text-4xl font-bold text-[#ccd6f6] md:text-6xl lg:text-7xl">
         Ryan Austin.
       </h2>
-      <h2 className="mb-5 font-heebo text-5xl font-bold text-[#8892b0] md:text-6xl lg:text-7xl ">
+      <h2 className="mb-5 font-heebo text-4xl font-bold text-[#8892b0] md:text-6xl lg:text-7xl ">
         I build things for the web.
       </h2>
-      <p className="mb-8 mr-12 max-w-[540px] font-poppins text-[#8892b0]">
+      <p className="mb-8 max-w-[540px] font-poppins text-[#8892b0] md:mr-12">
         I&apos;m a software engineer specialzing in building (and occationally
         designing) exceptional digital experiences. Currently, I&apos;m focused
         on building accessible, human-centered products.

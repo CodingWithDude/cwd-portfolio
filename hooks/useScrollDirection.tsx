@@ -5,23 +5,24 @@ const useScrollDirection = () => {
   const [atTop, setAtTop] = useState(true);
 
   useEffect(() => {
-    let lastScrollY = window.pageYOffset;
+    let lastScrollY = window.scrollY;
 
     const updateScrollDirection = () => {
-      const scrollY = window.pageYOffset;
-      const direction = scrollY > lastScrollY ? "down" : "up";
+      const currentScrollY = window.scrollY;
+      const direction = currentScrollY > lastScrollY ? "down" : "up";
       if (
         direction !== scrollDirection &&
-        (scrollY >= lastScrollY || scrollY <= lastScrollY)
+        (currentScrollY > lastScrollY || currentScrollY < lastScrollY)
       ) {
         setScrollDirection(direction);
       }
-      if (scrollY === 0) {
+      if (currentScrollY === 0) {
         setAtTop(true);
       } else {
         setAtTop(false);
       }
-      lastScrollY = scrollY > 0 ? scrollY : 0;
+      lastScrollY = currentScrollY > 0 ? currentScrollY : 0;
+      console.log(scrollDirection);
     };
     window.addEventListener("scroll", updateScrollDirection); // add event listener
     return () => {

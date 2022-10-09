@@ -7,7 +7,7 @@ interface Props {
 const MobileNav = ({ isOpen }: Props) => {
   return (
     <div
-      className={`h-[140%] w-[50%] bg-[#112240] pt-8 shadow-2xl duration-500 ease-in-out
+      className={`h-screen w-[50%] bg-[#112240] pt-8 shadow-2xl duration-500 ease-in-out
     ${isOpen ? "fixed top-0 right-0" : "fixed top-0 right-[-200%]"}
   `}
     >

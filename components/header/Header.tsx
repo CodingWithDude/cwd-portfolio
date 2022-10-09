@@ -1,28 +1,26 @@
 import Link from "next/link";
-import useScrollDirection from "../../hooks/useScrollDirection";
 import { Twirl as Hamburger } from "hamburger-react";
-import { useEffect } from "react";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 
 interface Props {
   isOpen: boolean;
   setIsOpen: (value: boolean | ((prevVar: boolean) => boolean)) => void;
+  scrollDirection: string | null;
+  atTop: boolean | null;
 }
 
-const Header = ({ isOpen, setIsOpen }: Props) => {
-  const { scrollDirection, atTop } = useScrollDirection();
-
+const Header = ({ isOpen, setIsOpen, scrollDirection, atTop }: Props) => {
   return (
     <header
-      className={`sticky z-[2] bg-[#0a192f] bg-opacity-95  ${
+      className={`fixed left-0 right-0 z-[2] bg-[#0a192f]/75 backdrop-blur-lg ${
         scrollDirection === "down" ? "-top-24" : "top-0"
-      }  transition-all duration-500 ${atTop ? "" : "shadow-xl"}`}
+      }  transition-all duration-700 ${atTop ? "" : "shadow-xl"}`}
     >
-      <div className="flex w-full items-center justify-between px-6 pt-4 pb-4 text-lg text-white md:px-8 lg:px-12">
+      <div className="flex w-full items-center justify-between px-6 text-lg text-white md:px-8 lg:px-12">
         {/* Logo Text */}
         <Link href="/">
-          <div className="logo cursor-pointer font-notoSansMono text-3xl font-medium">
+          <div className="logo my-1 cursor-pointer py-4 font-notoSansMono text-3xl font-medium">
             <div className="typing-mobile lg:hidden">
               <span className="logo-color">{`<C`}</span>
               <span className="logo-grey">W</span>
@@ -38,10 +36,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
           </div>
         </Link>
         {/* End Logo Text */}
-
-        <DesktopNav />
-
-        <div className={isOpen ? "z-[100] md:hidden" : "z-[100] md:hidden"}>
+        <div className={isOpen ? "z-[100]" : "z-[100] md:hidden"}>
           <Hamburger
             color="#64ffda"
             easing="ease-in-out"
@@ -50,7 +45,7 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
             toggle={setIsOpen}
           />
         </div>
-
+        <DesktopNav />
         <MobileNav isOpen={isOpen} />
       </div>
     </header>
