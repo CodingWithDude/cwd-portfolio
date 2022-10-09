@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: ReactElement }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollDirection, atTop } = useScrollDirection();
   return (
-    <>
+    <div id="home">
       <Header
         isOpen={isOpen}
         setIsOpen={setIsOpen}
@@ -18,7 +18,7 @@ const Layout = ({ children }: { children: ReactElement }) => {
       <SocialLinks />
       <Blur isOpen={isOpen} setIsOpen={setIsOpen} />
       <main>{children}</main>
-    </>
+    </div>
   );
 };
 

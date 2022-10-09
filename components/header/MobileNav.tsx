@@ -1,10 +1,14 @@
-import Link from "next/link";
+import { Link } from "react-scroll";
 
 interface Props {
   isOpen: boolean;
+  setIsOpen: (value: boolean | ((prevVar: boolean) => boolean)) => void;
 }
 
-const MobileNav = ({ isOpen }: Props) => {
+const MobileNav = ({ isOpen, setIsOpen }: Props) => {
+  const closeNav = () => {
+    setIsOpen(false);
+  };
   return (
     <div
       className={`h-screen w-[50%] bg-[#112240] pt-8 shadow-2xl duration-500 ease-in-out
@@ -15,7 +19,14 @@ const MobileNav = ({ isOpen }: Props) => {
       <nav className="flex flex-col items-end">
         <ul className="flex w-full flex-col items-center space-y-12 pt-16">
           <li>
-            <Link href="../About.tsx">
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onClick={closeNav}
+            >
               <a className="flex flex-col items-center">
                 <span className="nav-link-number">01. </span>
                 <span className="nav-link-title">About</span>
@@ -23,7 +34,14 @@ const MobileNav = ({ isOpen }: Props) => {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link
+              to="experience"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onClick={closeNav}
+            >
               <a className="flex flex-col items-center">
                 <span className="nav-link-number">02. </span>
                 <span className="nav-link-title">Experience</span>
@@ -31,7 +49,14 @@ const MobileNav = ({ isOpen }: Props) => {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link
+              to="work"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onClick={closeNav}
+            >
               <a className="flex flex-col items-center">
                 <span className="nav-link-number">03. </span>
                 <span className="nav-link-title">Work</span>
@@ -39,7 +64,14 @@ const MobileNav = ({ isOpen }: Props) => {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onClick={closeNav}
+            >
               <a className="flex flex-col items-center">
                 <span className="nav-link-number">04. </span>
                 <span className="nav-link-title">Contact</span>

@@ -1,12 +1,12 @@
-const About = () => {
+const Experience = () => {
   return (
     <section
-      id="about"
+      id="experience"
       className="flex h-screen min-h-[400px] w-full flex-col justify-center px-6 md:px-32 lg:pl-[calc(50vw-400px)]"
     >
-      about
+      Experience
     </section>
   );
 };
 
-export default About;
+export default Experience;

@@ -1,35 +1,47 @@
-import Link from "next/link";
+import { Link } from "react-scroll";
 
 const DesktopNav = () => {
   return (
     <nav className="hidden md:block">
       <ul className="flex items-center text-sm md:gap-2 lg:text-lg xl:gap-8 xl:text-xl">
-        <li>
-          <Link href="#about" scroll={false}>
+        <li className="cursor-pointer">
+          <Link to="about" spy={true} smooth={true} offset={50} duration={500}>
             <a className="group whitespace-nowrap">
               <span className="nav-link-number">01. </span>
               <span className="nav-link-title">About</span>
             </a>
           </Link>
         </li>
-        <li>
-          <Link href="/">
+        <li className="cursor-pointer">
+          <Link
+            to="experience"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
             <a className="group whitespace-nowrap">
               <span className="nav-link-number">02. </span>
               <span className="nav-link-title">Experience</span>
             </a>
           </Link>
         </li>
-        <li>
-          <Link href="/">
+        <li className="cursor-pointer">
+          <Link to="work" spy={true} smooth={true} offset={50} duration={500}>
             <a className="group whitespace-nowrap">
               <span className="nav-link-number">03. </span>
               <span className="nav-link-title">Work</span>
             </a>
           </Link>
         </li>
-        <li>
-          <Link href="/">
+        <li className="cursor-pointer">
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
             <a className="group whitespace-nowrap">
               <span className="nav-link-number">04. </span>
               <span className="nav-link-title">Contact</span>

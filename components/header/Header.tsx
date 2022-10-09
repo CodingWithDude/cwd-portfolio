@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { Twirl as Hamburger } from "hamburger-react";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
+import { Link } from "react-scroll";
 
 interface Props {
   isOpen: boolean;
@@ -19,7 +19,7 @@ const Header = ({ isOpen, setIsOpen, scrollDirection, atTop }: Props) => {
     >
       <div className="flex w-full items-center justify-between px-6 text-lg text-white md:px-8 lg:px-12">
         {/* Logo Text */}
-        <Link href="/">
+        <Link to="hero" spy={true} smooth={true} offset={50} duration={500}>
           <div className="logo my-1 cursor-pointer py-4 font-notoSansMono text-3xl font-medium">
             <div className="typing-mobile lg:hidden">
               <span className="logo-color">{`<C`}</span>
@@ -46,7 +46,7 @@ const Header = ({ isOpen, setIsOpen, scrollDirection, atTop }: Props) => {
           />
         </div>
         <DesktopNav />
-        <MobileNav isOpen={isOpen} />
+        <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </header>
   );
