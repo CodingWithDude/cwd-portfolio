@@ -21,20 +21,22 @@ const Header = ({ isOpen, setIsOpen }: Props) => {
     >
       <div className="flex w-full items-center justify-between px-6 pt-4 pb-4 text-lg text-white md:px-8 lg:px-12">
         {/* Logo Text */}
-        <div className="logo cursor-pointer font-notoSansMono text-3xl font-medium">
-          <div className="typing-mobile md:hidden">
-            <span className="logo-color">{`<C`}</span>
-            <span className="logo-grey">W</span>
-            <span className="logo-color">{`Dude/>`}</span>
-          </div>
-          <div className="typing-wrapper hidden md:block">
-            <div className="typing-desktop">
-              <span className="logo-color">{`<Coding`}</span>
-              <span className="logo-grey ">With</span>
+        <Link href="/">
+          <div className="logo cursor-pointer font-notoSansMono text-3xl font-medium">
+            <div className="typing-mobile lg:hidden">
+              <span className="logo-color">{`<C`}</span>
+              <span className="logo-grey">W</span>
               <span className="logo-color">{`Dude/>`}</span>
             </div>
+            <div className="typing-wrapper hidden lg:block">
+              <div className="typing-desktop">
+                <span className="logo-color">{`<Coding`}</span>
+                <span className="logo-grey ">With</span>
+                <span className="logo-color">{`Dude/>`}</span>
+              </div>
+            </div>
           </div>
-        </div>
+        </Link>
         {/* End Logo Text */}
 
         <DesktopNav />
