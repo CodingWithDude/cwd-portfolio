@@ -22,7 +22,7 @@ const About = () => {
           Website Security.
         </p>
         <p>
-          My strength is my ability to learn and destructure an unfamiliar
+          My strength is my ability to learn and deconstruct an unfamiliar
           concept into a usable, applicable skillset. My focus is self growth
           and delvering consistent value to the teams I develop with.
         </p>
