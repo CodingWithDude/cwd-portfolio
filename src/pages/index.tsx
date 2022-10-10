@@ -3,6 +3,7 @@ import Head from "next/head";
 import About from "../../components/About";
 import Contact from "../../components/Contact";
 import Experience from "../../components/Experience";
+import Footer from "../../components/Footer";
 import Hero from "../../components/Hero";
 import Work from "../../components/Work";
 
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
       <Experience />
       <Work />
       <Contact />
+      <Footer />
     </div>
   );
 };
