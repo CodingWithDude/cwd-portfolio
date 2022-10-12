@@ -24,7 +24,9 @@ const useScrollDirection = () => {
       lastScrollY = currentScrollY > 0 ? currentScrollY : 0;
       console.log(scrollDirection);
     };
-    window.addEventListener("scroll", updateScrollDirection); // add event listener
+    window.addEventListener("scroll", updateScrollDirection, {
+      passive: false,
+    }); // add event listener
     return () => {
       window.removeEventListener("scroll", updateScrollDirection); // clean up
     };
