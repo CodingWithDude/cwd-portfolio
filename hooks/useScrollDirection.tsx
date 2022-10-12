@@ -25,7 +25,7 @@ const useScrollDirection = () => {
       console.log(scrollDirection);
     };
     window.addEventListener("scroll", updateScrollDirection, {
-      passive: false,
+      passive: true,
     }); // add event listener
     return () => {
       window.removeEventListener("scroll", updateScrollDirection); // clean up
