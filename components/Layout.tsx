@@ -7,6 +7,7 @@ import SocialLinks from "./SocialLinks";
 const Layout = ({ children }: { children: ReactElement }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollDirection, atTop } = useScrollDirection();
+
   return (
     <div id="home">
       <Header

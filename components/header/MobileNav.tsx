@@ -27,10 +27,10 @@ const MobileNav = ({ isOpen, setIsOpen }: Props) => {
               duration={500}
               onClick={closeNav}
             >
-              <a className="group flex cursor-pointer flex-col items-center">
+              <div className="group flex cursor-pointer flex-col items-center">
                 <span className="nav-link-number">01. </span>
                 <span className="nav-link-title">About</span>
-              </a>
+              </div>
             </Link>
           </li>
           <li>
@@ -42,10 +42,10 @@ const MobileNav = ({ isOpen, setIsOpen }: Props) => {
               duration={500}
               onClick={closeNav}
             >
-              <a className="group flex cursor-pointer flex-col items-center">
+              <div className="group flex cursor-pointer flex-col items-center">
                 <span className="nav-link-number">02. </span>
                 <span className="nav-link-title">Experience</span>
-              </a>
+              </div>
             </Link>
           </li>
           <li>
@@ -57,10 +57,10 @@ const MobileNav = ({ isOpen, setIsOpen }: Props) => {
               duration={500}
               onClick={closeNav}
             >
-              <a className="group flex cursor-pointer flex-col items-center">
+              <div className="group flex cursor-pointer flex-col items-center">
                 <span className="nav-link-number">03. </span>
                 <span className="nav-link-title">Work</span>
-              </a>
+              </div>
             </Link>
           </li>
           <li>
@@ -72,10 +72,10 @@ const MobileNav = ({ isOpen, setIsOpen }: Props) => {
               duration={500}
               onClick={closeNav}
             >
-              <a className="group flex cursor-pointer flex-col items-center">
+              <div className="group flex cursor-pointer flex-col items-center">
                 <span className="nav-link-number">04. </span>
                 <span className="nav-link-title">Contact</span>
-              </a>
+              </div>
             </Link>
           </li>
           <button className="rounded border-2 border-[#64ffda] py-2 px-4 text-[#64ffda] filter transition duration-[.3s] ease-in-out hover:bg-[#64ffda] hover:bg-opacity-[10%]">

@@ -1,16 +1,10 @@
-import {
-  FiCodepen,
-  FiGithub,
-  FiInstagram,
-  FiLinkedin,
-  FiTwitter,
-} from "react-icons/fi";
+import SocialLinkList from "../utils/SocialLinkList";
 
 const Footer = () => {
   return (
     <footer className="flex w-full flex-col items-center justify-center gap-2 pt-32 pb-4 text-[#8892b0]">
       <a href="https://github.com/CodingWithDude">
-        <p className="text-xs">Built by Ryan Austin</p>
+        <span className="text-xs">Built by Ryan Austin</span>
       </a>
       <a href="https://github.com/CodingWithDude" className="cursor-pointer ">
         <div className="cursor-pointer text-lg font-bold">
@@ -25,21 +19,7 @@ const Footer = () => {
         </p>
       </a>
       <div className="flex w-full items-center justify-center gap-6 pt-2 md:hidden">
-        <a href="https://github.com/CodingWithDude">
-          <FiGithub className="social-icons" />
-        </a>
-        <a href="https://github.com/CodingWithDude">
-          <FiInstagram className="social-icons" />
-        </a>
-        <a href="https://github.com/CodingWithDude">
-          <FiTwitter className="social-icons" />
-        </a>
-        <a href="https://github.com/CodingWithDude">
-          <FiLinkedin className="social-icons" />
-        </a>
-        <a href="https://github.com/CodingWithDude">
-          <FiCodepen className="social-icons" />
-        </a>
+        <SocialLinkList />
       </div>
     </footer>
   );
