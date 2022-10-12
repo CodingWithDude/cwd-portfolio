@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex w-full flex-col justify-center px-6 pt-24 md:px-32 lg:pl-[calc(50vw-400px)]"
+      className="fade-in-up flex w-full flex-col justify-center px-6 pt-24 md:px-32 lg:pl-[calc(50vw-400px)]"
     >
       <div className="flex justify-between gap-2">
         <p className="self-center text-accent md:text-xl">01.</p>

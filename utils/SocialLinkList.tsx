@@ -9,20 +9,20 @@ import {
 const SocialLinkList = () => {
   return (
     <>
-      <a href="https://github.com/CodingWithDude">
-        <FiGithub className="social-icons" />
+      <a className="social-icons" href="https://github.com/CodingWithDude">
+        <FiGithub />
       </a>
-      <a href="https://github.com/CodingWithDude">
-        <FiInstagram className="social-icons" />
+      <a className="social-icons" href="https://github.com/CodingWithDude">
+        <FiInstagram />
       </a>
-      <a href="https://github.com/CodingWithDude">
-        <FiTwitter className="social-icons" />
+      <a className="social-icons" href="https://github.com/CodingWithDude">
+        <FiTwitter />
       </a>
-      <a href="https://github.com/CodingWithDude">
-        <FiLinkedin className="social-icons" />
+      <a className="social-icons" href="https://github.com/CodingWithDude">
+        <FiLinkedin />
       </a>
-      <a href="https://github.com/CodingWithDude">
-        <FiCodepen className="social-icons" />
+      <a className="social-icons" href="https://github.com/CodingWithDude">
+        <FiCodepen />
       </a>
     </>
   );
