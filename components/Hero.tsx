@@ -6,27 +6,27 @@ const Hero = () => {
     >
       <div>
         <div>
-          <p className=" font-thin text-[#64ffda]">Hi, my name is</p>
+          <p className=" font-thin text-accent">Hi, my name is</p>
         </div>
         <div>
-          <h2 className="my-4 font-heebo text-4xl font-bold text-[#ccd6f6] md:text-6xl lg:text-7xl">
+          <h2 className="my-4 font-heebo text-4xl font-bold text-primary md:text-6xl lg:text-7xl">
             Ryan Austin.
           </h2>
         </div>
         <div>
-          <h2 className="mb-5 font-heebo text-4xl font-bold text-[#8892b0] md:text-6xl lg:text-7xl ">
+          <h2 className="mb-5 font-heebo text-4xl font-bold text-secondary md:text-6xl lg:text-7xl ">
             I build things for the web.
           </h2>
         </div>
         <div>
-          <p className="mb-8 max-w-[540px] font-poppins text-[#8892b0] md:mr-12">
+          <p className="mb-8 max-w-[540px] font-poppins text-secondary md:mr-12">
             I&apos;m a software engineer specialzing in building (and
             occationally designing) exceptional digital experiences. Currently,
             I&apos;m focused on building accessible, human-centered products.
           </p>
         </div>
         <div>
-          <button className="w-40 rounded border-2 border-[#64ffda] p-4 text-[#64ffda] filter transition duration-[.3s] ease-in-out hover:bg-[#64ffda] hover:bg-opacity-[10%]">
+          <button className="w-40 rounded border-2 border-accent p-4 text-accent filter transition duration-[.3s] ease-in-out hover:bg-accent hover:bg-opacity-[10%]">
             Contact Me
           </button>
         </div>

@@ -1,5 +1,4 @@
 import { Link } from "react-scroll";
-import { SyntheticEvent } from "react";
 
 const DesktopNav = () => {
   return (
@@ -50,7 +49,7 @@ const DesktopNav = () => {
           </Link>
         </li>
         <li>
-          <button className="rounded border-2 border-[#64ffda] py-2 px-4 text-[#64ffda] filter transition duration-[.3s] ease-in-out hover:bg-[#64ffda] hover:bg-opacity-[10%]">
+          <button className="rounded border-2 border-accent py-2 px-4 text-accent filter transition duration-[.3s] ease-in-out hover:bg-accent hover:bg-opacity-[10%]">
             Resume
           </button>
         </li>

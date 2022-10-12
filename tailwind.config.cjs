@@ -5,6 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    colors: {
+      primary: "#c6d0ef",
+      secondary: "#8892b0",
+      accent: "#64ffda",
+    },
     extend: {
       fontFamily: {
         heebo: ["Heebo", "sans-serif"],

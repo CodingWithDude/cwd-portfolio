@@ -2,7 +2,7 @@ import SocialLinkList from "../utils/SocialLinkList";
 
 const Footer = () => {
   return (
-    <footer className="flex w-full flex-col items-center justify-center gap-2 pt-32 pb-4 text-[#8892b0]">
+    <footer className="flex w-full flex-col items-center justify-center gap-2 pt-32 pb-4 text-secondary">
       <a href="https://github.com/CodingWithDude">
         <span className="text-xs">Built by Ryan Austin</span>
       </a>
