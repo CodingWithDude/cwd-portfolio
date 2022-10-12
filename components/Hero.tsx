@@ -20,8 +20,8 @@ const Hero = () => {
         </div>
         <div>
           <p className="mb-8 max-w-[540px] font-poppins text-secondary md:mr-12">
-            I&apos;m a software engineer specialzing in building (and
-            occationally designing) exceptional digital experiences. Currently,
+            I&apos;m a software engineer specializing in building (and
+            occasionally designing) exceptional digital experiences. Currently,
             I&apos;m focused on building accessible, human-centered products.
           </p>
         </div>
