@@ -25,14 +25,17 @@ const About = () => {
         <p>
           Hello, my name is Ryan and I also go by Dude! I enjoy creating digital
           experiences that live on the internet. My interest in software
-          development started back in 2015 when I built an automation tool in
-          python to alleviate repetative user inputs while working at SiteLock
-          Website Security.
+          development started back in 2015 with{" "}
+          <a className="text-accent underline" href="https://www.sitelock.com/">
+            Sitelock
+          </a>{" "}
+          when I started building automation tools in python to help with
+          repetitive user inputs.
         </p>
         <p>
           My strength is my ability to learn and deconstruct an unfamiliar
-          concept into a usable, applicable skillset. My focus is self growth
-          and delvering consistent value to the teams I develop with.
+          concept into a usable, applicable skill set. My focus is self growth
+          and delivering consistent value to the teams I develop with.
         </p>
         <p>Here are a few technologies I&apos;ve been working with recently:</p>
         <div className="grid max-w-md grid-cols-2 gap-4 py-4 text-xs">
