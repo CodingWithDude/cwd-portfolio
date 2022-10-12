@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="fade-in-up flex h-screen min-h-[400px] w-full flex-col justify-center px-6 md:px-32 lg:pl-[calc(50vw-400px)]"
+      className="fade-in-up flex h-screen min-h-[400px] w-full flex-col justify-center px-6 pb-24 md:px-32 lg:pl-[calc(50vw-400px)]"
     >
       <div>
         <div>

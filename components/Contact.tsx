@@ -1,8 +1,17 @@
+import { useInView } from "react-intersection-observer";
+
 const Contact = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
   return (
     <section
+      ref={ref}
       id="contact"
-      className="flex w-full flex-col items-center justify-center gap-4 px-6 pt-24"
+      className={`flex w-full flex-col items-center justify-center gap-4 px-6 pt-24 ${
+        inView ? "fade-in-up" : "opacity-0"
+      }`}
     >
       <p className="text-accent">04. What&apos;s Next?</p>
       <h3 className="font-heebo text-4xl  text-primary">Get In Touch</h3>
