@@ -14,14 +14,14 @@ const About = () => {
         inView ? "fade-in-up" : "opacity-0"
       }`}
     >
-      <div className="flex justify-between gap-2">
+      <div className="flex max-w-[900px] justify-between gap-2">
         <p className="self-center text-accent md:text-xl">01.</p>
         <h3 className="text-[1.4rem] font-bold text-primary md:text-3xl">
           About Me
         </h3>
         <div className="flex-1 self-center border-b-[1px] border-secondary/60"></div>
       </div>
-      <div className="flex flex-col gap-4 py-4 text-sm text-secondary md:text-base">
+      <div className="flex max-w-[900px] flex-col gap-4 py-4 text-sm text-secondary md:text-base">
         <p>
           Hello, my name is Ryan and I also go by Dude! I enjoy creating digital
           experiences that live on the internet. My interest in software
