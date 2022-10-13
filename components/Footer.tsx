@@ -1,4 +1,4 @@
-import SocialLinkList from "../utils/SocialLinkList";
+import { socialLinkList } from "../utils/constants";
 
 const Footer = () => {
   return (
@@ -19,7 +19,11 @@ const Footer = () => {
         </p>
       </a>
       <div className="flex w-full items-center justify-center gap-6 pt-2 md:hidden">
-        <SocialLinkList />
+        {socialLinkList.map((item, index) => (
+          <a className="social-icons" href={item.href} key={index}>
+            {item.icon}
+          </a>
+        ))}
       </div>
     </footer>
   );

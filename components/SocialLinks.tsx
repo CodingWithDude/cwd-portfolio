@@ -1,15 +1,19 @@
-import SocialLinkList from "../utils/SocialLinkList";
+import { socialLinkList } from "../utils/constants";
 
 const SocialLinks = () => {
   return (
     <div className="hidden md:block">
-      <div className="fade-in-social-links fixed left-8 bottom-0 flex flex-col items-center lg:left-8 ">
+      <div className="fade-in-social-links fixed left-8 bottom-0 flex flex-col items-center xl:left-10 ">
         <div className="flex flex-col gap-6 text-secondary">
-          <SocialLinkList />
+          {socialLinkList.map((item, index) => (
+            <a className="social-icons" href={item.href} key={index}>
+              {item.icon}
+            </a>
+          ))}
         </div>
         <div className="mt-8 h-16 w-[2px] bg-secondary"></div>
       </div>
-      <div className="fade-in-social-links fixed bottom-0 right-8 lg:right-8 ">
+      <div className="fade-in-social-links fixed bottom-0 right-8 xl:right-10 ">
         <div className="flex flex-col items-center gap-[180px]">
           <a href="#" className="social-icons rotate-90 text-sm text-secondary">
             codingwithdude@gmail.com

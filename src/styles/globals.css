@@ -19,7 +19,7 @@
     @apply text-primary transition duration-[.4s] ease-in-out group-hover:text-accent;
   }
   .social-icons {
-    @apply h-5 w-5 text-secondary transition duration-[.3s] hover:text-accent md:hover:-translate-y-1;
+    @apply h-5 w-5 text-secondary transition duration-[.3s] hover:text-accent  md:hover:-translate-y-1 xl:text-xl;
   }
   .no-scroll {
     @apply touch-none overflow-y-hidden;

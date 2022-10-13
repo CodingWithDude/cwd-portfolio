@@ -42,7 +42,7 @@ const Header = ({ isOpen, setIsOpen, scrollDirection, atTop }: Props) => {
             easing="ease-in-out"
             duration={0.5}
             toggled={isOpen}
-            toggle={setIsOpen}
+            toggle={() => setIsOpen((prev) => !prev)}
           />
         </div>
         <DesktopNav />
