@@ -9,7 +9,7 @@ const Work = () => {
     <section
       ref={ref}
       id="work"
-      className={`flex w-full flex-col justify-center px-6 pt-20 md:px-32 lg:pl-[calc(50vw-400px)] ${
+      className={`flex w-full flex-col justify-center px-6 pt-20 md:px-32 lg:items-center ${
         inView ? "fade-in-up" : "opacity-0"
       }`}
     >

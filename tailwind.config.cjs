@@ -5,17 +5,17 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      primary: "#c6d0ef",
-      secondary: "#8892b0",
-      accent: "#64ffda",
-      background: "#0a192f",
-    },
     extend: {
       fontFamily: {
         heebo: ["Heebo", "sans-serif"],
         notoSansMono: ["Noto Sans Mono", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+      },
+      colors: {
+        primary: "#c6d0ef",
+        secondary: "#8892b0",
+        accent: "#64ffda",
+        background: "#0a192f",
       },
     },
   },
