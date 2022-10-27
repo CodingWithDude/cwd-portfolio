@@ -13,7 +13,7 @@ const About = () => {
   const headShotIntersection = useIntersection(headShotRef, {
     root: null,
     rootMargin: "-250px",
-    threshold: 1,
+    threshold: 0.9,
   });
 
   return (
