@@ -76,8 +76,8 @@ const About = () => {
           </div>
         </div>
         <div className="group mb-12 w-screen max-w-[200px] rounded-lg bg-accent  lg:max-w-[300px]">
-          <div className="absolute  top-6 left-6 -z-[3] h-full w-full rounded-lg border-2 border-accent duration-200 ease-in group-hover:top-4 group-hover:left-4"></div>
-          <div className="absolute top-0 left-0 h-full w-full rounded-lg  bg-accent/10 duration-200 ease-in group-hover:bg-transparent"></div>
+          <div className="absolute top-6 left-6 -z-[3] h-screen max-h-[200px] w-screen max-w-[200px] rounded-lg border-2 border-accent duration-200 ease-in group-hover:top-4 group-hover:left-4 lg:max-h-[300px] lg:max-w-[300px]"></div>
+          <div className="absolute top-0 left-0 rounded-lg  bg-accent/10 duration-200 ease-in group-hover:bg-transparent"></div>
           <Image
             src="https://res.cloudinary.com/djjxydn3p/image/upload/c_scale,w_500/v1666827367/profile-final_ouylky.png"
             alt="profile"
