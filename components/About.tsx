@@ -1,12 +1,21 @@
 import Image from "next/image";
+import React from "react";
 import { GoTriangleRight } from "react-icons/go";
 import { useInView } from "react-intersection-observer";
+import { useIntersection, useWindowScroll } from "react-use";
 
 const About = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: "-100px 0px",
   });
+  const headShotRef = React.useRef(null);
+  const headShotIntersection = useIntersection(headShotRef, {
+    root: null,
+    rootMargin: "-250px",
+    threshold: 1,
+  });
+
   return (
     <section
       ref={ref}
@@ -75,16 +84,28 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="group mb-12 w-screen max-w-[200px] rounded-lg bg-accent  lg:max-w-[300px]">
-          <div className="absolute top-6 left-6 -z-[3] h-screen max-h-[200px] w-screen max-w-[200px] rounded-lg border-2 border-accent duration-200 ease-in group-hover:top-4 group-hover:left-4 lg:max-h-[300px] lg:max-w-[300px]"></div>
-          <div className="absolute top-0 left-0 rounded-lg  bg-accent/10 duration-200 ease-in group-hover:bg-transparent"></div>
+        <div
+          ref={headShotRef}
+          className="group mb-12 w-screen max-w-[200px] rounded-lg bg-accent lg:max-w-[300px]"
+        >
+          <div
+            className={`absolute top-6 left-6 -z-[3] h-screen max-h-[200px] w-screen max-w-[200px] rounded-lg border-2 border-accent duration-200 ease-in lg:max-h-[300px] lg:max-w-[300px] ${
+              headShotIntersection?.isIntersecting === true
+                ? "top-4 left-4 group-hover:top-6 group-hover:left-6"
+                : "group-hover:top-4 group-hover:left-4"
+            }`}
+          ></div>
           <Image
             src="https://res.cloudinary.com/djjxydn3p/image/upload/c_scale,w_500/v1666827367/profile-final_ouylky.png"
             alt="profile"
             layout="responsive"
             width={300}
             height={300}
-            className="-z-[1] rounded-lg  mix-blend-multiply group-hover:bg-white group-hover:mix-blend-normal"
+            className={`-z-[1] rounded-lg duration-200 ease-in  ${
+              headShotIntersection?.isIntersecting
+                ? "bg-white mix-blend-normal group-hover:bg-transparent group-hover:mix-blend-multiply"
+                : "mix-blend-multiply group-hover:bg-white group-hover:mix-blend-normal"
+            }`}
           />
         </div>
       </div>
