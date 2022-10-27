@@ -12,7 +12,7 @@ const About = () => {
   const headShotRef = React.useRef(null);
   const headShotIntersection = useIntersection(headShotRef, {
     root: null,
-    rootMargin: "-250px",
+    rootMargin: "-50px",
     threshold: 0.9,
   });
 
