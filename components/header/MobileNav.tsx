@@ -36,11 +36,9 @@ const MobileNav = ({ isOpen, setIsOpen }: Props) => {
               </Link>
             </li>
           ))}
-          <li>
-            <button className="rounded border-2 border-accent py-2 px-4 text-accent filter transition duration-[.3s] ease-in-out hover:bg-accent hover:bg-opacity-[10%]">
-              Resume
-            </button>
-          </li>
+          <button className="rounded border-2 border-accent py-2 px-4 text-accent filter transition duration-[.3s] ease-in-out hover:bg-accent hover:bg-opacity-[10%]">
+            Resume
+          </button>
         </ul>
       </nav>
     </div>

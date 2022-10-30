@@ -20,3 +20,21 @@ export const navLinks = [
   { name: "work", number: "03.", title: "Work" },
   { name: "contact", number: "04.", title: "Contact" },
 ];
+
+const blogProject = {
+  image:
+    "https://res.cloudinary.com/djjxydn3p/image/upload/v1667079487/portfolio/blog-picture_qtolix.png",
+  title: "CodingWithDude Blog",
+  description: `My digital playground where I share what I'm learning about exciting new technologies and building a career as a self taught developer.`,
+  technologies: [
+    "TypeScript",
+    "Content Layer",
+    "MDX",
+    "Next.js",
+    "TailwindCSS",
+  ],
+  github: "https://github.com/CodingWithDude/blog",
+  url: "https://blog.codingwithdude.com/",
+};
+
+export const projects = [blogProject];

@@ -2,11 +2,17 @@ import { socialLinkList } from "../utils/constants";
 
 const SocialLinks = () => {
   return (
-    <div className="hidden md:block">
+    <div className="hidden lg:block">
       <div className="fade-in-social-links fixed left-8 bottom-0 flex flex-col items-center xl:left-10 ">
         <div className="flex flex-col gap-6 text-secondary">
           {socialLinkList.map((item, index) => (
-            <a className="social-icons" href={item.href} key={index}>
+            <a
+              className="social-icons"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={item.href}
+              key={index}
+            >
               {item.icon}
             </a>
           ))}

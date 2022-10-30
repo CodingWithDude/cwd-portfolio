@@ -2,9 +2,11 @@ import Image from "next/image";
 import React from "react";
 import { GoTriangleRight } from "react-icons/go";
 import { useInView } from "react-intersection-observer";
-import { useIntersection, useWindowScroll } from "react-use";
+import { useIntersection, useWindowSize } from "react-use";
 
 const About = () => {
+  const { height } = useWindowSize();
+  console.log(height / 2);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: "-100px 0px",
@@ -12,23 +14,23 @@ const About = () => {
   const headShotRef = React.useRef(null);
   const headShotIntersection = useIntersection(headShotRef, {
     root: null,
-    rootMargin: "-50px",
-    threshold: 0.9,
+    rootMargin: `-${height / 2 - 50}px 0px -${height / 2 - 50}px 0px`,
+    threshold: 0,
   });
 
   return (
     <section
       ref={ref}
       id="about"
-      className={`flex w-full items-center justify-center px-6 pt-24 md:px-32 lg:items-center ${
+      className={`flex w-full items-center justify-center px-6 pt-24 md:px-12 lg:items-center ${
         inView ? "fade-in-up" : "opacity-0"
       }`}
     >
       <div className="flex max-w-[900px] flex-col items-center justify-center gap-10 lg:flex-row">
-        <div className="shrink-1 flex flex-col">
-          <div className="flex  justify-between gap-2">
-            <p className="self-center text-accent md:text-xl">01.</p>
-            <h3 className="text-[1.4rem] font-bold text-primary md:text-3xl">
+        <div className=" flex flex-col">
+          <div className="flex justify-between gap-2">
+            <p className="self-center text-lg text-accent md:text-xl">01.</p>
+            <h3 className="text-xl font-bold text-primary md:text-3xl">
               About Me
             </h3>
             <div className="flex-1 self-center border-b-[1px] border-secondary/60"></div>
@@ -39,7 +41,7 @@ const About = () => {
               digital experiences that live on the internet. My interest in
               software development started back in 2015 with{" "}
               <a
-                className="text-accent underline"
+                className="text-accent hover:underline"
                 href="https://www.sitelock.com/"
               >
                 Sitelock
@@ -91,8 +93,8 @@ const About = () => {
           <div
             className={`absolute top-6 left-6 -z-[3] h-screen max-h-[200px] w-screen max-w-[200px] rounded-lg border-2 border-accent duration-200 ease-in lg:max-h-[300px] lg:max-w-[300px] ${
               headShotIntersection?.isIntersecting === true
-                ? "top-4 left-4 group-hover:top-6 group-hover:left-6"
-                : "group-hover:top-4 group-hover:left-4"
+                ? "top-4 left-4 "
+                : ""
             }`}
           ></div>
           <Image
@@ -103,8 +105,8 @@ const About = () => {
             height={300}
             className={`-z-[1] rounded-lg duration-200 ease-in  ${
               headShotIntersection?.isIntersecting
-                ? "bg-white mix-blend-normal group-hover:bg-transparent group-hover:mix-blend-multiply"
-                : "mix-blend-multiply group-hover:bg-white group-hover:mix-blend-normal"
+                ? "bg-white mix-blend-normal "
+                : "mix-blend-multiply "
             }`}
           />
         </div>

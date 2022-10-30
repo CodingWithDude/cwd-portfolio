@@ -10,7 +10,7 @@ const Experience = () => {
     <section
       ref={ref}
       id="experience"
-      className={`flex w-full flex-col justify-center px-6 pt-24 md:px-32 lg:items-center ${
+      className={`flex w-full flex-col justify-center p-6 pt-24 md:px-12  lg:items-center ${
         inView ? "fade-in-up" : "opacity-0"
       }`}
     >
