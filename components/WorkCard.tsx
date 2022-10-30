@@ -18,15 +18,15 @@ const WorkCard = ({ project }: Props) => {
   const { height } = useWindowSize();
   return (
     <div className="my-12 duration-200 ease-in">
-      <div className="relative w-full rounded-xl shadow-lg md:max-w-[500px]">
+      <div className="relative rounded-xl shadow-lg md:max-w-[500px]">
         <InView
           threshold={0}
           rootMargin={`-${height / 2 - 50}px 0px -${height / 2 - 50}px 0px`}
         >
           {({ inView, ref }) => (
-            <div className={`w-full rounded-xl md:max-h-[499px] md:bg-accent `}>
+            <div className={` rounded-xl md:max-h-[499px] md:bg-accent `}>
               <div
-                className={`absolute -z-[3] hidden h-full w-full rounded-lg border-2 border-accent duration-200 ease-in md:block md:max-h-[500px] md:max-w-[500px]  ${
+                className={`absolute -z-[3] hidden h-full  rounded-lg border-2 border-accent duration-200 ease-in md:block md:max-h-[500px] md:max-w-[500px]  ${
                   inView ? "top-4 right-4 " : "top-6 right-6 "
                 }`}
               ></div>
@@ -55,7 +55,7 @@ const WorkCard = ({ project }: Props) => {
         </InView>
       </div>
       <div className="absolute top-0 right-0 bottom-0 left-0 md:left-[50%]">
-        <div className="flex h-full w-full items-center rounded-lg bg-[#0c2034]/95 p-6  md:bg-transparent">
+        <div className="flex h-full  items-center rounded-lg bg-[#0c2034]/95 p-6  md:bg-transparent">
           <div className="flex flex-col">
             <p className="pb-2 text-sm text-accent md:self-center">
               Featured Project

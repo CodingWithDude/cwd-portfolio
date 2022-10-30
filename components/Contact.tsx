@@ -9,7 +9,7 @@ const Contact = () => {
     <section
       ref={ref}
       id="contact"
-      className={`flex w-full flex-col items-center justify-center gap-4 px-6 pt-24 ${
+      className={`flex flex-col items-center justify-center gap-4 pt-24 ${
         inView ? "fade-in-up" : "opacity-0"
       }`}
     >

@@ -2,7 +2,7 @@ import { socialLinkList } from "../utils/constants";
 
 const Footer = () => {
   return (
-    <footer className="flex w-full flex-col items-center justify-center gap-2 pt-32 pb-4 text-secondary">
+    <footer className="flex flex-col items-center justify-center gap-2 pt-32 pb-4 text-secondary">
       <a href="https://github.com/CodingWithDude">
         <span className="text-xs">Built by Ryan Austin</span>
       </a>
@@ -18,7 +18,7 @@ const Footer = () => {
           Design inspired by Brittany Chiang
         </p>
       </a>
-      <div className="flex w-full items-center justify-center gap-6 pt-2 md:hidden">
+      <div className="flex items-center justify-center gap-6 pt-2 md:hidden">
         {socialLinkList.map((item, index) => (
           <a className="social-icons" href={item.href} key={index}>
             {item.icon}

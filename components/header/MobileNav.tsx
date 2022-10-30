@@ -18,7 +18,7 @@ const MobileNav = ({ isOpen, setIsOpen }: Props) => {
       }`}
     >
       <nav className="flex flex-col items-end">
-        <ul className="flex w-full flex-col items-center space-y-12 pt-16">
+        <ul className="flex flex-col items-center space-y-12 pt-16">
           {navLinks.map((item) => (
             <li key={item.name}>
               <Link

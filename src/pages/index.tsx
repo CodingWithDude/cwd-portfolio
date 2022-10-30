@@ -9,7 +9,7 @@ import Work from "../../components/Work";
 
 const Home: NextPage = () => {
   return (
-    <div className="h-screen w-screen">
+    <div className="flex flex-col">
       <Head>
         <title>Coding with Dude</title>
         <meta
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <Hero />
       <About />
       <Experience />
-      <Work />
+      {/* <Work /> */}
       <Contact />
       <Footer />
     </div>

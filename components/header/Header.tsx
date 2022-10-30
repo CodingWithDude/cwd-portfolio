@@ -1,5 +1,4 @@
 import { Twirl as Hamburger } from "hamburger-react";
-
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import { Link } from "react-scroll";
@@ -18,7 +17,7 @@ const Header = ({ isOpen, setIsOpen, scrollDirection, atTop }: Props) => {
         scrollDirection === "down" ? "-top-24" : "top-0"
       }  transition-all duration-700 ${atTop ? "" : "shadow-xl"}`}
     >
-      <div className="flex w-full items-center justify-between px-6 text-lg text-white md:px-8 lg:px-12">
+      <div className="flex items-center justify-between px-6 text-lg text-white md:px-8 lg:px-12">
         {/* Logo Text */}
         <Link to="hero" spy={true} smooth={true} offset={50} duration={500}>
           <div className="logo my-1 cursor-pointer py-4 font-notoSansMono text-3xl font-medium">

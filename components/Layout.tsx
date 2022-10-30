@@ -9,7 +9,7 @@ const Layout = ({ children }: { children: ReactElement }) => {
   const { scrollDirection, atTop } = useScrollDirection();
 
   return (
-    <div id="home" className="">
+    <div id="home" className="mx-6 md:mx-12">
       <Header
         isOpen={isOpen}
         setIsOpen={setIsOpen}

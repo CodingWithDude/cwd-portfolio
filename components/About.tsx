@@ -22,7 +22,7 @@ const About = () => {
     <section
       ref={ref}
       id="about"
-      className={`flex w-full items-center justify-center px-6 pt-24 md:px-12 lg:items-center ${
+      className={`flex w-full items-center justify-center pt-24 lg:items-center ${
         inView ? "fade-in-up" : "opacity-0"
       }`}
     >
