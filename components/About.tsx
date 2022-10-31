@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { GoTriangleRight } from "react-icons/go";
-import { useInView } from "react-intersection-observer";
+import { InView, useInView } from "react-intersection-observer";
 import { useIntersection, useWindowSize } from "react-use";
 
 const About = () => {
@@ -9,12 +9,6 @@ const About = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: "-100px 0px",
-  });
-  const headShotRef = React.useRef(null);
-  const headShotIntersection = useIntersection(headShotRef, {
-    root: null,
-    rootMargin: `-${height / 2 - 75}px 0px -${height / 2 - 75}px 0px`,
-    threshold: 0,
   });
 
   return (
@@ -87,30 +81,33 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div
-          ref={headShotRef}
-          className="group mb-12 w-screen max-w-[200px] rounded-[5px] bg-accent lg:max-w-[300px]"
+        <InView
+          rootMargin={`-${height / 2 - 50}px 0px -${height / 2 - 50}px 0px`}
         >
-          <div
-            className={`absolute top-6 left-6 -z-[3] h-screen max-h-[200px] w-screen max-w-[200px] rounded border-2 border-accent duration-200 ease-in lg:max-h-[300px] lg:max-w-[300px] ${
-              headShotIntersection?.isIntersecting === true
-                ? "top-4 left-4 "
-                : ""
-            }`}
-          ></div>
-          <Image
-            src="https://res.cloudinary.com/djjxydn3p/image/upload/c_scale,w_500/v1666827367/profile-final_ouylky.png"
-            alt="profile"
-            layout="responsive"
-            width={300}
-            height={300}
-            className={`-z-[1] rounded duration-200 ease-in  ${
-              headShotIntersection?.isIntersecting
-                ? "bg-white mix-blend-normal "
-                : "mix-blend-multiply "
-            }`}
-          />
-        </div>
+          {({ inView, ref }) => (
+            <div
+              ref={ref}
+              className="group mb-12 w-screen max-w-[200px] rounded-[5px] bg-accent lg:max-w-[300px]"
+            >
+              <div
+                className={`absolute top-6 left-6 -z-[3] h-screen max-h-[200px] w-screen max-w-[200px] rounded border-2 border-accent duration-200 ease-in lg:max-h-[300px] lg:max-w-[300px] ${
+                  inView ? "top-4 left-4 " : ""
+                }`}
+              ></div>
+
+              <Image
+                src="https://res.cloudinary.com/djjxydn3p/image/upload/c_scale,w_500/v1666827367/profile-final_ouylky.png"
+                alt="profile"
+                layout="responsive"
+                width={300}
+                height={300}
+                className={`-z-[1] rounded duration-200 ease-in  ${
+                  inView ? "bg-white mix-blend-normal " : "mix-blend-multiply "
+                }`}
+              />
+            </div>
+          )}
+        </InView>
       </div>
     </section>
   );
