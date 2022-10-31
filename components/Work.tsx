@@ -24,9 +24,9 @@ const Work = () => {
             </h3>
             <div className="flex-1 self-center border-b-[1px] border-secondary/60"></div>
           </div>
-          <div className="flex pt-12">
-            {projects.map((project) => {
-              return <WorkCard key={project.title} project={project} />;
+          <div className="flex flex-col gap-8 pt-12 md:gap-28">
+            {projects.map((project, index) => {
+              return <WorkCard key={index} project={project} index={index} />;
             })}
           </div>
         </div>

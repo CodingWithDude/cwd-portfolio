@@ -23,7 +23,7 @@ export const navLinks = [
 
 const blogProject = {
   image:
-    "https://res.cloudinary.com/djjxydn3p/image/upload/q_auto/v1667167511/portfolio/blog-picture_fe19uv.webp",
+    "https://res.cloudinary.com/djjxydn3p/image/upload/v1667167511/portfolio/blog-picture_fe19uv.webp",
   title: "CodingWithDude Blog",
   description: `My digital playground where I share what I'm learning about exciting new technologies and building a career as a self taught developer.`,
   technologies: [
@@ -37,4 +37,4 @@ const blogProject = {
   url: "https://blog.codingwithdude.com/",
 };
 
-export const projects = [blogProject];
+export const projects = [blogProject, blogProject];
