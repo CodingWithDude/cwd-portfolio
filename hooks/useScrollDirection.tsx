@@ -22,7 +22,6 @@ const useScrollDirection = () => {
         setAtTop(false);
       }
       lastScrollY = currentScrollY > 0 ? currentScrollY : 0;
-      console.log(scrollDirection);
     };
     window.addEventListener("scroll", updateScrollDirection, {
       passive: true,
