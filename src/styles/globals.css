@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply bg-background;
+    @apply bg-background font-notoSansMono;
   }
 }
 
@@ -30,6 +30,7 @@
   .logo-grey {
     @apply text-primary;
   }
+
   /* Typing Animation */
   .typing-wrapper {
     height: 100%;

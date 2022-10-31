@@ -6,7 +6,7 @@ const Hero = () => {
     >
       <div>
         <div>
-          <p className=" font-thin text-accent">Hi, my name is</p>
+          <p className=" text-accent">Hi, my name is</p>
         </div>
         <div>
           <h2 className="my-4 font-heebo text-4xl font-bold text-primary md:text-6xl lg:text-7xl">

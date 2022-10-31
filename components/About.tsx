@@ -6,7 +6,6 @@ import { useIntersection, useWindowSize } from "react-use";
 
 const About = () => {
   const { height } = useWindowSize();
-  console.log(height / 2);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: "-100px 0px",
@@ -29,7 +28,9 @@ const About = () => {
       <div className="flex max-w-[900px] flex-col items-center justify-center gap-10 lg:flex-row">
         <div className=" flex flex-col">
           <div className="flex justify-between gap-2">
-            <p className="self-center text-lg text-accent md:text-xl">01.</p>
+            <p className="mt-[1px] self-center text-lg text-accent md:text-xl">
+              01.
+            </p>
             <h3 className="text-xl font-bold text-primary md:text-3xl">
               About Me
             </h3>
@@ -88,10 +89,10 @@ const About = () => {
         </div>
         <div
           ref={headShotRef}
-          className="group mb-12 w-screen max-w-[200px] rounded-lg bg-accent lg:max-w-[300px]"
+          className="group mb-12 w-screen max-w-[200px] rounded-[5px] bg-accent lg:max-w-[300px]"
         >
           <div
-            className={`absolute top-6 left-6 -z-[3] h-screen max-h-[200px] w-screen max-w-[200px] rounded-lg border-2 border-accent duration-200 ease-in lg:max-h-[300px] lg:max-w-[300px] ${
+            className={`absolute top-6 left-6 -z-[3] h-screen max-h-[200px] w-screen max-w-[200px] rounded border-2 border-accent duration-200 ease-in lg:max-h-[300px] lg:max-w-[300px] ${
               headShotIntersection?.isIntersecting === true
                 ? "top-4 left-4 "
                 : ""
@@ -103,7 +104,7 @@ const About = () => {
             layout="responsive"
             width={300}
             height={300}
-            className={`-z-[1] rounded-lg duration-200 ease-in  ${
+            className={`-z-[1] rounded duration-200 ease-in  ${
               headShotIntersection?.isIntersecting
                 ? "bg-white mix-blend-normal "
                 : "mix-blend-multiply "
