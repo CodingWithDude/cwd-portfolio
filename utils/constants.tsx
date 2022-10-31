@@ -9,7 +9,7 @@ import {
 export const socialLinkList = [
   { icon: <FiGithub />, href: "https://github.com/CodingWithDude" },
   { icon: <FiInstagram />, href: "https://github.com/CodingWithDude" },
-  { icon: <FiTwitter />, href: "https://github.com/CodingWithDude" },
+  { icon: <FiTwitter />, href: "https://twitter.com/codingwithdude" },
   { icon: <FiLinkedin />, href: "https://github.com/CodingWithDude" },
   { icon: <FiCodepen />, href: "https://github.com/CodingWithDude" },
 ];
