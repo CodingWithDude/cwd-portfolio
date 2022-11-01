@@ -34,7 +34,9 @@ const WorkCard = ({ project, index }: Props) => {
               <div className="absolute top-0 bottom-0 left-0 right-0 md:hidden">
                 <Image
                   src={project.image}
-                  layout="fill"
+                  layout="intrinsic"
+                  width="100%"
+                  height="100%"
                   objectFit="cover"
                   objectPosition="center"
                   alt=""
@@ -43,7 +45,7 @@ const WorkCard = ({ project, index }: Props) => {
               <div
                 ref={ref}
                 className={`hidden h-[323px] w-[549px] md:block  ${
-                  inView ? "md:bg-transparent" : "rounded-[5px] md:bg-accent"
+                  inView ? "md:bg-background" : "rounded-[5px] md:bg-accent"
                 }`}
               >
                 <Image

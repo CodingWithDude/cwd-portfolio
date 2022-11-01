@@ -23,7 +23,9 @@ export const navLinks = [
 
 const blogProject = {
   image:
-    "https://res.cloudinary.com/djjxydn3p/image/upload/v1667167511/portfolio/blog-picture_fe19uv.webp",
+    "https://res.cloudinary.com/djjxydn3p/image/upload/v1667279827/portfolio/blog-bg_awf2qd.webp",
+  // image:
+  //   "https://res.cloudinary.com/djjxydn3p/image/upload/v1666750237/cld-sample-3.jpg",
   title: "CodingWithDude Blog",
   description: `My digital playground where I share what I'm learning about exciting new technologies and building a career as a self taught developer.`,
   technologies: [
