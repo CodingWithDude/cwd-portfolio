@@ -23,7 +23,9 @@ const Blur = ({ isOpen, setIsOpen }: Props) => {
     <div
       id="blur-filter"
       className={`${
-        isOpen ? "fixed top-0 -ml-8 h-[140%] backdrop-blur-[2px]" : "hidden"
+        isOpen
+          ? "absolute top-0 z-[1] -ml-8 h-[140%] w-full backdrop-blur-[2px]"
+          : "hidden"
       }`}
     />
   );

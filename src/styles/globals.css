@@ -13,10 +13,10 @@
 
 @layer components {
   .nav-link-number {
-    @apply text-accent;
+    @apply text-accent lg:text-xl;
   }
   .nav-link-title {
-    @apply text-primary transition duration-[.4s] ease-in-out group-hover:text-accent;
+    @apply text-primary transition duration-[.4s] ease-in-out group-hover:text-accent lg:text-xl;
   }
   .social-icons {
     @apply h-5 w-5 text-secondary transition duration-[.3s] hover:text-accent  md:hover:-translate-y-1 xl:text-xl;

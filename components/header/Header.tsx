@@ -13,11 +13,11 @@ interface Props {
 const Header = ({ isOpen, setIsOpen, scrollDirection, atTop }: Props) => {
   return (
     <header
-      className={`fixed left-0 right-0 z-[2] bg-background/75 backdrop-blur-lg ${
+      className={`fixed left-0 right-0 z-[2] bg-background/75 backdrop-blur-[2px] ${
         scrollDirection === "down" ? "-top-24" : "top-0"
       }  transition-all duration-700 ${atTop ? "" : "shadow-xl"}`}
     >
-      <div className="flex items-center justify-between px-6 text-lg text-white md:px-8 lg:px-12">
+      <div className="flex items-center justify-between px-6 text-lg text-white md:px-8 lg:px-16">
         {/* Logo Text */}
         <Link to="hero" spy={true} smooth={true} offset={50} duration={500}>
           <div className="logo my-1 cursor-pointer py-4 font-notoSansMono text-3xl font-medium">

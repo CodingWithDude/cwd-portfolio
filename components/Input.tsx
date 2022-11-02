@@ -4,11 +4,8 @@ interface Props {
   label: string;
   placeholder: string;
   value: string;
-  onChange: (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur: (e: React.ChangeEvent<HTMLInputElement>) => void;
   error: boolean;
   errorMessage: string | undefined;
 }
@@ -20,29 +17,37 @@ const Input = ({
   placeholder,
   value,
   onChange,
+  onBlur,
   error,
   errorMessage = "",
   ...props
 }: Props) => {
   return (
-    <div className="mb-3 w-full">
-      <label className="block text-lg" htmlFor="{id}">
+    <div className="mb-4 w-full">
+      <label className="mb-1 block text-lg" htmlFor="{id}">
         {label}
       </label>
-      <input
-        value={value}
-        onChange={onChange}
-        autoComplete="off"
-        id={id}
-        name={name}
-        placeholder={placeholder}
-        type="text"
-        className="w-full rounded-md border-gray-400 border-opacity-50 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-purple-500"
-        {...props}
-      />
-      {error ? (
-        <p className="text-sm italic text-red-500">{errorMessage}</p>
-      ) : null}
+      <div className="relative">
+        <input
+          value={value}
+          onChange={onChange}
+          onBlur={onBlur}
+          autoComplete="off"
+          id={id}
+          name={name}
+          placeholder={placeholder}
+          type="text"
+          className={`mb-4 w-full rounded-md bg-gray-900 py-1 indent-2 text-gray-400 placeholder-gray-400 shadow outline-none focus:ring-2 focus:ring-accent ${
+            error ? "ring-2 ring-red-500" : ""
+          }`}
+          {...props}
+        />
+        {error ? (
+          <p className="absolute -bottom-3 text-sm italic text-red-500">
+            {errorMessage}
+          </p>
+        ) : null}
+      </div>
     </div>
   );
 };

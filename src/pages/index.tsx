@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       <About />
       <Experience />
       <Work />
-      <Contact />
+      <Contact setShowContactModal={setShowContactModal} />
       <Footer />
     </div>
   );

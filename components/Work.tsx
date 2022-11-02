@@ -1,5 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { projects } from "../utils/constants";
+import SectionTitle from "./SectionTitle";
 import WorkCard from "./WorkCard";
 
 const Work = () => {
@@ -17,13 +18,7 @@ const Work = () => {
     >
       <div className="flex w-full max-w-[900px] flex-col items-center justify-center gap-10 lg:flex-row">
         <div className="flex w-full flex-col">
-          <div className="flex justify-between gap-2">
-            <p className="mt-[1px] self-center text-accent md:text-xl">03.</p>
-            <h3 className="text-xl font-bold text-primary md:text-3xl">
-              Some Things I&apos;ve Built
-            </h3>
-            <div className="flex-1 self-center border-b-[1px] border-secondary/60"></div>
-          </div>
+          <SectionTitle sectionNumber="03." title="Work" />
           <div className="flex flex-col gap-8 pt-12 md:gap-28">
             {projects.map((project, index) => {
               return <WorkCard key={index} project={project} index={index} />;

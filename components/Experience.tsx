@@ -1,4 +1,5 @@
 import { useInView } from "react-intersection-observer";
+import SectionTitle from "./SectionTitle";
 
 const Experience = () => {
   const { ref, inView } = useInView({
@@ -10,11 +11,13 @@ const Experience = () => {
     <section
       ref={ref}
       id="experience"
-      className={`flex flex-col justify-center pt-24 lg:items-center ${
+      className={`flex flex-col items-center justify-center pt-24 ${
         inView ? "fade-in-up" : "opacity-0"
       }`}
     >
-      <p className="text-primary">Experience - Coming Soon</p>
+      <div className="w-full max-w-[900px]">
+        <SectionTitle sectionNumber="02." title="Experience" />
+      </div>
     </section>
   );
 };

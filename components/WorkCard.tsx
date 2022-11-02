@@ -60,22 +60,22 @@ const WorkCard = ({ project, index }: Props) => {
               </div>
             </div>
             <div
-              className={`z-[1] flex w-full flex-col bg-[#0e2641]/[.85] py-8 px-4 md:absolute md:-top-8 md:bottom-0 md:left-0 md:right-0 md:bg-transparent md:px-0 ${
+              className={`z-[1] flex w-full flex-col bg-[#0e2641]/[.9] py-8 px-4 md:absolute md:-top-8 md:bottom-0 md:left-0 md:right-0 md:bg-transparent md:px-0 ${
                 index % 2 === 0 ? "md:items-end" : "md:items-start"
               }`}
             >
               <p className="pb-2 text-sm text-accent">Featured Project</p>
-              <h2 className="pb-4 text-xl font-bold text-gray-300 md:pb-6 md:text-2xl">
+              <h2 className="pb-4 font-heebo text-xl font-bold text-primary md:pb-6 md:text-2xl">
                 {project.title}
               </h2>
               <p
-                className={`rounded py-4 text-sm text-slate-400 md:w-[425px] md:bg-[#112240] md:px-4 md:py-6 md:pr-6  ${
+                className={`rounded py-4 font-poppins text-secondary md:w-[425px] md:bg-[#112240] md:px-4 md:py-4 md:pr-6  ${
                   index % 2 === 0 ? "md:text-right" : "md:text-left"
                 }`}
               >
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-4 pt-4 text-sm text-slate-400 md:w-[300px] md:pt-6">
+              <div className="flex flex-wrap gap-4 pt-4 text-sm text-secondary md:w-[300px] md:pt-6">
                 {project.technologies.map((tech) => (
                   <div key={tech} className="flex items-center gap-1">
                     <GoTriangleRight className="text-accent" />
@@ -83,7 +83,7 @@ const WorkCard = ({ project, index }: Props) => {
                   </div>
                 ))}
               </div>
-              <div className="flex items-center gap-4 pt-6 text-2xl text-gray-300">
+              <div className="flex items-center gap-4 pt-8 text-2xl text-primary">
                 <a
                   href={project.github}
                   target="_blank"

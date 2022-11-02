@@ -3,6 +3,7 @@ import React from "react";
 import { GoTriangleRight } from "react-icons/go";
 import { InView, useInView } from "react-intersection-observer";
 import { useIntersection, useWindowSize } from "react-use";
+import SectionTitle from "./SectionTitle";
 
 const About = () => {
   const { height } = useWindowSize();
@@ -19,18 +20,10 @@ const About = () => {
         inView ? "fade-in-up" : "opacity-0"
       }`}
     >
-      <div className="flex max-w-[900px] flex-col items-center justify-center gap-10 lg:flex-row">
+      <div className="flex  max-w-[900px] flex-col items-center justify-center gap-10 lg:flex-row">
         <div className=" flex flex-col">
-          <div className="flex justify-between gap-2">
-            <p className="mt-[1px] self-center text-lg text-accent md:text-xl">
-              01.
-            </p>
-            <h3 className="text-xl font-bold text-primary md:text-3xl">
-              About Me
-            </h3>
-            <div className="flex-1 self-center border-b-[1px] border-secondary/60"></div>
-          </div>
-          <div className="flex max-w-[900px] flex-col gap-4 py-4 text-sm text-secondary md:text-base">
+          <SectionTitle sectionNumber="01." title="About Me" />
+          <div className="flex max-w-[900px] flex-col gap-4 py-4 font-poppins  text-secondary md:text-base">
             <p>
               Hello, my name is Ryan and I also go by Dude! I enjoy creating
               digital experiences that live on the internet. My interest in
@@ -53,7 +46,7 @@ const About = () => {
             <p>
               Here are a few technologies I&apos;ve been working with recently:
             </p>
-            <div className="grid max-w-md grid-cols-2 gap-4 py-4 text-xs">
+            <div className="grid max-w-md grid-cols-2 gap-4 py-4 font-notoSansMono text-sm">
               <div className="flex items-center gap-2">
                 <GoTriangleRight className=" text-accent" />
                 <p>JavaScript (ES6+)</p>
