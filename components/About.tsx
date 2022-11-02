@@ -23,7 +23,7 @@ const About = () => {
       <div className="flex  max-w-[900px] flex-col items-center justify-center gap-10 lg:flex-row">
         <div className=" flex flex-col">
           <SectionTitle sectionNumber="01." title="About Me" />
-          <div className="flex max-w-[900px] flex-col gap-4 py-4 font-poppins  text-secondary md:text-base">
+          <div className="flex max-w-[900px] flex-col gap-4 py-4 font-poppins  text-secondary md:text-lg">
             <p>
               Hello, my name is Ryan and I also go by Dude! I enjoy creating
               digital experiences that live on the internet. My interest in

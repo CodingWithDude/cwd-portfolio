@@ -23,7 +23,7 @@ export const navLinks = [
 
 const blogProject = {
   image:
-    "https://res.cloudinary.com/djjxydn3p/image/upload/v1667279827/portfolio/blog-bg_awf2qd.webp",
+    "https://res.cloudinary.com/djjxydn3p/image/upload/ar_16:9,c_fill/v1667381772/portfolio/blog-bg_nc1vqr.png",
   // image:
   //   "https://res.cloudinary.com/djjxydn3p/image/upload/v1666750237/cld-sample-3.jpg",
   title: "CodingWithDude Blog",

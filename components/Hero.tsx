@@ -25,7 +25,7 @@ const Hero = ({ setShowContactModal }: Props) => {
           </h2>
         </div>
         <div>
-          <p className="mb-8 max-w-[540px] font-poppins text-secondary md:mr-12">
+          <p className="mb-8 max-w-[540px] font-poppins text-secondary md:mr-12 md:text-lg">
             I&apos;m a software engineer specializing in building (and
             occasionally designing) exceptional digital experiences. Currently,
             I&apos;m focused on building accessible, human-centered products.

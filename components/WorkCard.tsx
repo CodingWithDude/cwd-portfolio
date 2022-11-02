@@ -42,19 +42,23 @@ const WorkCard = ({ project, index }: Props) => {
               </div>
               <div
                 ref={ref}
-                className={`hidden h-[323px] w-[549px] md:block  ${
+                className={`relative hidden h-[322px] w-[549px] md:block  ${
                   inView ? "md:bg-background" : "rounded-[5px] md:bg-accent"
                 }`}
               >
+                <a href={project.url} target="_blank" rel="noopener noreferrer">
+                  <div className="absolute z-[2] h-full w-full cursor-pointer"></div>
+                </a>
+
                 <Image
                   src={project.image}
-                  layout="fixed"
+                  layout="fill"
                   objectFit="cover"
                   width={550}
                   height={323}
                   alt=""
-                  className={`self-end rounded duration-700 ease-in-out ${
-                    inView ? "" : "opacity-[.6] "
+                  className={`cursor-pointer self-end rounded duration-700 ease-in-out ${
+                    inView ? "" : "opacity-[.6]"
                   }`}
                 />
               </div>
@@ -65,11 +69,11 @@ const WorkCard = ({ project, index }: Props) => {
               }`}
             >
               <p className="pb-2 text-sm text-accent">Featured Project</p>
-              <h2 className="pb-4 font-heebo text-xl font-bold text-primary md:pb-6 md:text-2xl">
+              <h2 className="pb-4 font-heebo text-xl font-bold text-primary md:pb-6 md:text-3xl">
                 {project.title}
               </h2>
               <p
-                className={`rounded py-4 font-poppins text-secondary md:w-[425px] md:bg-[#112240] md:px-4 md:py-4 md:pr-6  ${
+                className={`rounded py-4 font-poppins text-secondary md:w-[425px] md:bg-[#112240] md:px-4 md:py-4 md:pr-6 md:text-lg  ${
                   index % 2 === 0 ? "md:text-right" : "md:text-left"
                 }`}
               >
