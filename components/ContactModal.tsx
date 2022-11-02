@@ -1,79 +1,97 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { CgClose } from "react-icons/cg";
+import Input from "./Input";
+import TextArea from "./TextArea";
+import { validate } from "../utils/validate";
+
 interface Props {
-  setShowModal: (value: boolean | ((prevVar: boolean) => boolean)) => void;
+  setShowContactModal: (
+    value: boolean | ((prevVar: boolean) => boolean)
+  ) => void;
 }
 
-const ContactModal = ({ setShowModal }: Props) => {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
+const ContactModal = ({ setShowContactModal }: Props) => {
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    message?: string;
+  }>({});
 
-  const handleSubmit = () => ({});
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const errors = validate(values);
+    const isError = Object.keys(errors).length;
+    if (isError && isError > 0) {
+      setErrors(errors);
+      return;
+    }
+    setErrors({});
+    setShowContactModal((prev) => !prev);
+    console.log(values);
+  };
+
+  const onChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   return (
     <div className="fixed inset-0 z-50 backdrop-blur-sm">
       <div className="flex h-screen items-center justify-center">
         <div className="flex-col justify-center rounded-lg border-4 border-sky-500 bg-white p-2">
           <div className="flex justify-end border-black text-3xl">
-            <button onClick={() => setShowModal((prev) => !prev)}>
+            <button onClick={() => setShowContactModal((prev) => !prev)}>
               <CgClose />
             </button>
           </div>
-          <form className="flex flex-col rounded-lg">
+          <form
+            className="flex flex-col rounded-lg"
+            onSubmit={(e) => handleSubmit(e)}
+          >
             <h1 className="text-2xl font-bold dark:text-gray-50">
               Send a message
             </h1>
-
-            <label
-              htmlFor="name"
-              className="mt-8 font-light text-gray-500 dark:text-gray-50"
-            >
-              Name<span className="text-red-500 dark:text-gray-50">*</span>
-            </label>
-            <input
-              type="text"
+            <Input
+              error={!!errors.name}
+              errorMessage={errors.name}
+              value={values.name}
+              onChange={onChange}
+              id="name"
               name="name"
-              className="border-b bg-transparent py-2 font-light text-gray-500 ring-green-500 focus:rounded-md focus:outline-none focus:ring-1"
-              value={name}
-              onChange={(e) => {
-                setName(e.target.value);
-              }}
+              placeholder="dude"
+              label="Name"
             />
-
-            <label
-              htmlFor="email"
-              className="mt-4 font-light text-gray-500 dark:text-gray-50"
-            >
-              E-mail<span className="text-red-500">*</span>
-            </label>
-            <input
-              type="email"
+            <Input
+              error={!!errors.email}
+              errorMessage={errors.email}
+              value={values.email}
+              onChange={onChange}
+              id="email"
               name="email"
-              className="border-b bg-transparent py-2 font-light text-gray-500 ring-green-500 focus:rounded-md focus:outline-none focus:ring-1"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+              placeholder="dude@gmail.com"
+              label="Email"
             />
-            <label
-              htmlFor="message"
-              className="mt-4 font-light text-gray-500 dark:text-gray-50"
-            >
-              Message<span className="text-red-500">*</span>
-            </label>
-            <textarea
+            <TextArea
+              error={!!errors.message}
+              errorMessage={errors.message}
+              value={values.message}
+              onChange={onChange}
+              id="message"
               name="message"
-              className="border-b bg-transparent py-2 font-light text-gray-500 ring-green-500 focus:rounded-md focus:outline-none focus:ring-1"
-              value={message}
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
-            ></textarea>
+              placeholder="Hello there!"
+              label="Message"
+            />
             <div className="flex flex-row items-center justify-start">
               <button
                 type="submit"
-                onSubmit={() => handleSubmit()}
                 className="mt-8 flex flex-row items-center rounded-md bg-[#130F49] px-10 py-2 text-lg font-light text-gray-50"
               >
                 Send

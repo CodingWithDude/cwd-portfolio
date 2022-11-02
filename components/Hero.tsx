@@ -1,8 +1,10 @@
 interface Props {
-  setShowModal: (value: boolean | ((prevVar: boolean) => boolean)) => void;
+  setShowContactModal: (
+    value: boolean | ((prevVar: boolean) => boolean)
+  ) => void;
 }
 
-const Hero = ({ setShowModal }: Props) => {
+const Hero = ({ setShowContactModal }: Props) => {
   return (
     <section
       id="hero"
@@ -31,7 +33,7 @@ const Hero = ({ setShowModal }: Props) => {
         </div>
         <div>
           <button
-            onClick={() => setShowModal((prev) => !prev)}
+            onClick={() => setShowContactModal((prev) => !prev)}
             className="w-40 rounded border-2 border-accent p-4 text-accent filter transition duration-[.3s] ease-in-out hover:bg-accent hover:bg-opacity-[10%]"
           >
             Contact Me

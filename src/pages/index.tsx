@@ -10,7 +10,7 @@ import Hero from "../../components/Hero";
 import Work from "../../components/Work";
 
 const Home: NextPage = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [showContactModal, setShowContactModal] = useState(false);
   return (
     <div className="flex flex-col">
       <Head>
@@ -21,8 +21,10 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {showModal ? <ContactModal setShowModal={setShowModal} /> : null}
-      <Hero setShowModal={setShowModal} />
+      {showContactModal ? (
+        <ContactModal setShowContactModal={setShowContactModal} />
+      ) : null}
+      <Hero setShowContactModal={setShowContactModal} />
       <About />
       <Experience />
       <Work />
