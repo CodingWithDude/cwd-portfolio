@@ -13,7 +13,7 @@ interface Props {
 const Header = ({ isOpen, setIsOpen, scrollDirection, atTop }: Props) => {
   return (
     <header
-      className={`fixed left-0 right-0 z-[2] bg-background/75 backdrop-blur-[2px] ${
+      className={`fixed left-0 right-0 z-[3] bg-background/75 backdrop-blur-lg ${
         scrollDirection === "down" ? "-top-24" : "top-0"
       }  transition-all duration-700 ${atTop ? "" : "shadow-xl"}`}
     >

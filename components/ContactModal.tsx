@@ -90,7 +90,7 @@ const ContactModal = ({ setShowContactModal }: Props) => {
   };
 
   return (
-    <div className="fixed inset-0 z-[2] backdrop-blur-[2px]">
+    <div className="fixed inset-0 z-[2] backdrop-blur-sm">
       <div className="mx-auto flex h-screen w-full max-w-[500px] items-center justify-center px-8">
         <div className="w-full flex-col justify-center rounded bg-[#0e2641] p-8 shadow-[8px_8px_5px_0px_rgba(0,0,0,0.2)]">
           <div className="mb-4 flex-col text-3xl text-gray-300">
