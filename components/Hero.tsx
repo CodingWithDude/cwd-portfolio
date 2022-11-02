@@ -1,4 +1,8 @@
-const Hero = () => {
+interface Props {
+  setShowModal: (value: boolean | ((prevVar: boolean) => boolean)) => void;
+}
+
+const Hero = ({ setShowModal }: Props) => {
   return (
     <section
       id="hero"
@@ -26,7 +30,10 @@ const Hero = () => {
           </p>
         </div>
         <div>
-          <button className="w-40 rounded border-2 border-accent p-4 text-accent filter transition duration-[.3s] ease-in-out hover:bg-accent hover:bg-opacity-[10%]">
+          <button
+            onClick={() => setShowModal((prev) => !prev)}
+            className="w-40 rounded border-2 border-accent p-4 text-accent filter transition duration-[.3s] ease-in-out hover:bg-accent hover:bg-opacity-[10%]"
+          >
             Contact Me
           </button>
         </div>
