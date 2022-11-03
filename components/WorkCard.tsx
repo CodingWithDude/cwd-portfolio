@@ -19,7 +19,7 @@ interface Props {
 const WorkCard = ({ project, index }: Props) => {
   const { height } = useWindowSize();
   return (
-    <div className={`relative flex w-full max-w-[900px] flex-col`}>
+    <div className={`relative flex w-full flex-col`}>
       {" "}
       <InView
         rootMargin={`-${height / 2 - 50}px 0px -${height / 2 - 50}px 0px`}
@@ -28,58 +28,71 @@ const WorkCard = ({ project, index }: Props) => {
           <div className="flex flex-col">
             <div
               className={`flex w-full ${
-                index % 2 === 0 ? "md:justify-start" : "md:justify-end"
+                index % 2 === 0 ? "lg:justify-start" : "lg:justify-end"
               }`}
             >
-              <div className="absolute top-0 bottom-0 left-0 right-0 md:hidden">
+              <div className="absolute top-0 bottom-0 left-0 right-0 lg:hidden">
                 <Image
                   src={project.image}
                   layout="fill"
                   objectFit="cover"
-                  objectPosition="center"
+                  objectPosition="top"
                   alt=""
                 />
               </div>
-              <div
-                ref={ref}
-                className={`relative hidden h-[322px] w-[549px] md:block  ${
-                  inView ? "md:bg-background" : "rounded-[5px] md:bg-accent"
-                }`}
-              >
-                <a href={project.url} target="_blank" rel="noopener noreferrer">
-                  <div className="absolute z-[2] h-full w-full cursor-pointer"></div>
-                </a>
-
-                <Image
-                  src={project.image}
-                  layout="fill"
-                  objectFit="cover"
-                  width={550}
-                  height={323}
-                  alt=""
-                  className={`cursor-pointer self-end rounded duration-700 ease-in-out ${
-                    inView ? "" : "opacity-[.6]"
-                  }`}
-                />
+              <div ref={ref} className={`hidden h-full w-full lg:flex`}>
+                {" "}
+                <div
+                  className={`relative flex h-full w-full ${
+                    index % 2 === 0 ? "" : "justify-end"
+                  } `}
+                  // ${
+                  //   inView ? "lg:bg-background" : "rounded-[5px] lg:bg-accent"
+                  // }
+                >
+                  <div
+                    className={`relative h-screen max-h-[375px] w-full max-w-[650px] rounded-2xl  ${
+                      inView ? "bg-background" : "bg-accent"
+                    }`}
+                  >
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="absolute top-0 left-0 bottom-0 right-0 z-[2] cursor-pointer"></div>
+                    </a>
+                    <Image
+                      src={project.image}
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="center"
+                      alt=""
+                      className={`cursor-pointer rounded-xl duration-200 ease-in-out ${
+                        inView ? "" : "opacity-80 mix-blend-multiply"
+                      }`}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
             <div
-              className={`z-[1] flex w-full flex-col bg-[#0e2641]/[.9] py-8 px-4 md:absolute md:-top-8 md:bottom-0 md:left-0 md:right-0 md:bg-transparent md:px-0 ${
-                index % 2 === 0 ? "md:items-end" : "md:items-start"
-              }`}
+              className={`z-[1] flex w-full flex-col bg-[#0e2641]/[.95] py-8 px-4 lg:absolute lg:-top-8 lg:bottom-0 lg:left-0 lg:right-0 lg:bg-transparent lg:px-0 ${
+                index % 2 === 0 ? "lg:items-end" : "lg:items-start"
+              } ${inView ? "" : ""}`}
             >
               <p className="pb-2 text-sm text-accent">Featured Project</p>
-              <h2 className="pb-4 font-heebo text-xl font-bold text-primary md:pb-6 md:text-3xl">
+              <h2 className="pb-4 font-heebo text-xl font-bold text-primary md:text-2xl lg:pb-8 lg:text-3xl">
                 {project.title}
               </h2>
               <p
-                className={`rounded py-4 font-poppins text-secondary md:w-[425px] md:bg-[#112240] md:px-4 md:py-4 md:pr-6 md:text-lg  ${
-                  index % 2 === 0 ? "md:text-right" : "md:text-left"
+                className={`rounded py-4 font-poppins text-secondary md:text-lg lg:w-[525px] lg:bg-[#112240] lg:px-4 lg:py-6 lg:pr-6  ${
+                  index % 2 === 0 ? "lg:text-right" : "lg:text-left"
                 }`}
               >
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-4 pt-4 text-sm text-secondary md:w-[300px] md:pt-6">
+              <div className="flex flex-wrap gap-4 pt-4 text-sm text-secondary lg:w-[300px] lg:pt-8">
                 {project.technologies.map((tech) => (
                   <div key={tech} className="flex items-center gap-1">
                     <GoTriangleRight className="text-accent" />

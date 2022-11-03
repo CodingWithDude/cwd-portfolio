@@ -15,7 +15,7 @@ const Experience = () => {
         inView ? "fade-in-up" : "opacity-0"
       }`}
     >
-      <div className="w-full max-w-[900px]">
+      <div className="w-full">
         <SectionTitle sectionNumber="02." title="Experience" />
       </div>
     </section>

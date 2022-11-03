@@ -2,7 +2,7 @@ import { socialLinkList } from "../utils/constants";
 
 const SocialLinks = () => {
   return (
-    <div className="hidden lg:block">
+    <div className="hidden xl:block">
       <div className="fade-in-social-links fixed left-8 bottom-0 flex flex-col items-center xl:left-10 ">
         <div className="flex flex-col gap-6 text-secondary">
           {socialLinkList.map((item, index) => (

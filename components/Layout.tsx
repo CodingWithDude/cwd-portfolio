@@ -18,7 +18,9 @@ const Layout = ({ children }: { children: ReactElement }) => {
       />
       <SocialLinks />
       <Blur isOpen={isOpen} setIsOpen={setIsOpen} />
-      <main>{children}</main>
+      <main className="flex flex-col items-center">
+        <div className=" max-w-[1100px]">{children}</div>
+      </main>
     </div>
   );
 };

@@ -16,10 +16,10 @@ const Work = () => {
         inView ? "" : "opacity-0"
       }`}
     >
-      <div className="flex w-full max-w-[900px] flex-col items-center justify-center gap-10 lg:flex-row">
+      <div className="flex w-full flex-col items-center justify-center gap-10 lg:flex-row">
         <div className="flex w-full flex-col">
           <SectionTitle sectionNumber="03." title="Work" />
-          <div className="flex flex-col gap-8 pt-12 md:gap-44 md:pt-16">
+          <div className="flex flex-col gap-8 pt-12 md:gap-24 md:pt-16">
             {projects.map((project, index) => {
               return <WorkCard key={index} project={project} index={index} />;
             })}
